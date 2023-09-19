@@ -1,0 +1,17 @@
+body {
+    background-color: slategrey;
+    font-family: monospace;
+}
+
+header {
+    text-decoration: underline;
+
+}
+section {
+    margin: 2rem;
+}
+
+dt {
+    font-style: italic;
+    margin-top: 0.5rem;
+}
