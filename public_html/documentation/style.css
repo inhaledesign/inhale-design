@@ -1,17 +1,28 @@
 body {
-    background-color: slategrey;
+    background-color: #779;
     font-family: monospace;
 }
 
-header {
-    text-decoration: underline;
-
-}
 section {
+    background-color: #668;
     margin: 2rem;
+    border: solid black 2px;
+    padding: 0.5rem 2rem;
+}
+
+section h2 {
+    background-color: #668;
 }
 
 dt {
     font-style: italic;
-    margin-top: 0.5rem;
+}
+
+dd:before {
+    content: '\25CA  ';
+}
+
+.content {
+    display: block;
+    margin: 0 auto;
 }
