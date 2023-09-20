@@ -1,13 +1,14 @@
 body {
     background-color: #779;
     font-family: monospace;
+    margin: 0 6rem;
 }
 
 section {
     background-color: #668;
     margin: 2rem;
     border: solid black 2px;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem;
     box-shadow: 2px 2px 10px #556;
 }
 
@@ -17,13 +18,12 @@ section h2 {
 
 dt {
     font-style: italic;
+    margin-top: .75rem;
+}
+dd {
+    margin-top: .25rem;
 }
 
 dd:before {
     content: '\25CA  ';
-}
-
-.content {
-    display: block;
-    margin: 0 auto;
 }
