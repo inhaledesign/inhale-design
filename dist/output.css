@@ -1296,10 +1296,6 @@ html {
   border-bottom-color: hsl(var(--bc) / 20%);
 }
 
-.float-left {
-  float: left;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1321,6 +1317,10 @@ html {
   margin-bottom: 2rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -1335,18 +1335,6 @@ html {
 
 .mt-20 {
   margin-top: 5rem;
-}
-
-.mr-8 {
-  margin-right: 2rem;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .flex {
@@ -1427,6 +1415,23 @@ html {
 .prose-headings\:text-primary-content :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+.prose-strong\:text-accent :is(:where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: hsl(var(--a) / var(--tw-text-opacity));
+}
+
+.prose-em\:text-accent :is(:where(em):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: hsl(var(--a) / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 768px) {
