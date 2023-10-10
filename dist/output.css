@@ -1323,6 +1323,10 @@ html {
   border-bottom-color: hsl(var(--bc) / 20%);
 }
 
+.float-left {
+  float: left;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1344,10 +1348,6 @@ html {
   margin-bottom: 2rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -1362,6 +1362,18 @@ html {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .flex {
@@ -1400,6 +1412,18 @@ html {
 
 .fill-current {
   fill: currentColor;
+}
+
+.fill-accent {
+  fill: hsl(var(--a) / 1);
+}
+
+.fill-primary {
+  fill: hsl(var(--p) / 1);
+}
+
+.fill-neutral-content {
+  fill: hsl(var(--nc) / 1);
 }
 
 .stroke-accent {
@@ -1461,8 +1485,17 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:place-self-center {
     place-self: center;
+  }
+
+  .md\:justify-self-end {
+    justify-self: end;
   }
 
   .md\:justify-self-center {
