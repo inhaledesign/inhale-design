@@ -1151,6 +1151,33 @@ html {
   text-decoration-line: underline;
 }
 
+.stack {
+  display: inline-grid;
+  place-items: center;
+  align-items: flex-end;
+}
+
+.stack > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  transform: translateY(10%) scale(0.9);
+  z-index: 1;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.stack > *:nth-child(2) {
+  transform: translateY(5%) scale(0.95);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.stack > *:nth-child(1) {
+  transform: translateY(0) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+
 @keyframes button-pop {
   0% {
     transform: scale(var(--btn-focus-scale, 0.98));
@@ -1375,6 +1402,10 @@ html {
   fill: currentColor;
 }
 
+.stroke-accent {
+  stroke: hsl(var(--a) / 1);
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -1422,11 +1453,6 @@ html {
   color: hsl(var(--a) / var(--tw-text-opacity));
 }
 
-.prose-em\:text-accent :is(:where(em):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
-  --tw-text-opacity: 1;
-  color: hsl(var(--a) / var(--tw-text-opacity));
-}
-
 @media (min-width: 640px) {
   .sm\:mx-auto {
     margin-left: auto;
@@ -1435,16 +1461,11 @@ html {
 }
 
 @media (min-width: 768px) {
-  .md\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .md\:place-self-center {
     place-self: center;
   }
 
-  .md\:justify-self-end {
-    justify-self: end;
+  .md\:justify-self-center {
+    justify-self: center;
   }
 }
