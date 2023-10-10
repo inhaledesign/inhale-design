@@ -8,16 +8,48 @@
 </head>
 
 <!-- TODO: Figure out how to fix Webstorm xmlns issue -->
-<!-- TODO: Alt text for SVGs? -->
-<!-- TODO: Move social media to top nav? -->
 <!-- TODO: Add device-framed screenshots to TileFarm and Modern Compass? -->
 <!-- TODO: Links to Tile Farm and Modern Compass? -->
-<!-- TODO: Explicitly make mobile friendly -->
 <!-- TODO: Support dark theme -->
 <body class="bg-neutral">
 
 <!-- TODO: Why does this need to be grid? -->
 <header class="bg-primary text-primary-content mb-5 grid items-center">
+    <nav class="flex justify-end gap-2 m-2">
+        <!-- E-mail -->
+        <a href="mailto:bob@inhale.design">
+            <svg role="img" width="32" height="32" viewBox="0 -960 960 960">
+                <title>E-mail Icon</title>
+                <path class="fill-secondary"
+                      d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/>
+            </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/inhale-design/">
+            <svg role="img" width="32" height="32" viewBox="0 0 16 16">
+                <title>LinkedIn Logo</title>
+                <path class="fill-secondary"
+                      d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/>
+            </svg>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/inhaledesign">
+            <svg role="img" width="32" height="32" viewBox="0 0 24 24">
+                <title>GitHub Logo</title>
+                <path class="fill-secondary"
+                      d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"/>
+            </svg>
+        </a>
+        <!-- Stack Overflow-->
+        <a href="https://stackoverflow.com/users/1748584/bob-liberatore">
+            <svg role="img" width="32" height="32" viewBox="0 0 24 24">
+                <title>Stack Overflow Logo</title>
+                <rect width="24" height="24" fill="none"/>
+                <path class="fill-secondary"
+                      d="M17.36,20.2V14.82h1.79V22H3V14.82H4.8V20.2H17.36M6.77,14.32l.37-1.76,8.79,1.85-.37,1.76L6.77,14.32m1.16-4.21L8.69,8.5l8.14,3.78-.76,1.62L7.93,10.11m2.26-4,1.15-1.38,6.9,5.76-1.15,1.37-6.9-5.75m4.45-4.25L20,9.08l-1.44,1.07L13.2,2.94l1.44-1.07m-8,16.54v-1.8h9v1.8Z"/>
+            </svg>
+        </a>
+    </nav>
     <div class="container ml-4 sm:mx-auto mt-20">
         <span class="mb-5 text-7xl font-bold tracking-widest">Inhale<br></span>
         <span class="mb-12 text-7xl font-bold tracking-widest ml-5">Design</span>
@@ -27,21 +59,19 @@
 
 <!-- About Me -->
 <section class="bg-primary mb-3">
-    <div class="container mx-auto flex items-center py-4">
-        <div aria-hidden="true">
-            <svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <clipPath id="clip">
-                        <polygon id="hexagon"
-                                 points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
-                    </clipPath>
-                </defs>
-                <image href="images/about.jpg" clip-path="url(#clip)" width="128" height="128"/>
-                <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
-            </svg>
-        </div>
+    <div class="container mx-auto grid items-center md:flex py-4">
+        <svg class="block mx-auto md:mx-0" aria-hidden="true" width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <clipPath id="clip">
+                    <polygon id="hexagon"
+                             points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
+                </clipPath>
+            </defs>
+            <image href="images/about.jpg" clip-path="url(#clip)" width="128" height="128"/>
+            <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
+        </svg>
         <div class="ml-8 prose prose-headings:text-primary-content text-primary-content prose-strong:text-accent">
-            <h1 class="mb-5">About Me: Bob Liberatore</h1>
+            <h1 class="mb-5 text-center md:text-left">Bob Liberatore</h1>
             <p>I'm a passionate app developer dedicated to crafting products that deliver
                 <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
@@ -55,21 +85,19 @@
 
 <!-- Tile Farm -->
 <section class="bg-primary text-primary-content mb-3">
-    <div class="container mx-auto flex items-center py-4">
-        <div aria-hidden="true">
-            <svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <clipPath id="clip">
-                        <polygon id="hexagon"
-                                 points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
-                    </clipPath>
-                </defs>
-                <image href="images/tile_farm.png" clip-path="url(#clip)" width="128" height="128"/>
-                <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
-            </svg>
-        </div>
+    <div class="container mx-auto grid items-center md:flex py-4">
+        <svg class="block mx-auto md:mx-0" aria-hidden="true" width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <clipPath id="clip">
+                    <polygon id="hexagon"
+                             points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
+                </clipPath>
+            </defs>
+            <image href="images/tile_farm.png" clip-path="url(#clip)" width="128" height="128"/>
+            <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
+        </svg>
         <div class="ml-8 prose prose-headings:text-primary-content text-primary-content">
-            <h1 class="mb-5 text-5xl font-bold">Tile Farm</h1>
+            <h1 class="mb-5 text-center md:text-left">Tile Farm</h1>
             <p>Teaming up with a professional mathematician, we embarked on a mission to transform math education by crafting a one-of-a-kind app that caters to learners of every age and diverse educational backgrounds. Tile Farm delivers a uniquely captivating learning experience, designed to align with constructivist teaching methodologies. Tile Farm's groundbreaking ideas were honored with an SBIR grant from the National Science Foundation.</p>
         </div>
     </div>
@@ -77,21 +105,19 @@
 
 <!-- Modern Compass -->
 <section class="bg-primary text-primary-content mb-3">
-    <div class="container mx-auto flex items-center py-4">
-        <div aria-hidden="true">
-            <svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <clipPath id="clip">
-                        <polygon id="hexagon"
-                                 points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
-                    </clipPath>
-                </defs>
-                <image href="images/modern_compass.png" clip-path="url(#clip)" width="128" height="128"/>
-                <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
-            </svg>
-        </div>
+    <div class="container mx-auto grid items-center md:flex py-4">
+        <svg class="block mx-auto md:mx-0" aria-hidden="true" width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <clipPath id="clip">
+                    <polygon id="hexagon"
+                             points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
+                </clipPath>
+            </defs>
+            <image href="images/modern_compass.png" clip-path="url(#clip)" width="128" height="128"/>
+            <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
+        </svg>
         <div class="ml-8 prose prose-headings:text-primary-content text-primary-content">
-            <h1 class="mb-5 text-5xl font-bold">Modern Compass</h1>
+            <h1 class="mb-5 text-center md:text-left">Modern Compass</h1>
             <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates the compass into the Android notification bar as well as a three-dimensional compass written in OpenGL ES.</p>
             <p>Developed using a test-driven approach, Modern Compass boasts extensive test coverage of over 90%.</p>
         </div>
@@ -100,21 +126,19 @@
 
 <!-- ShapeArt -->
 <section class="bg-primary text-primary-content mb-3">
-    <div class="container mx-auto flex items-center py-4">
-        <div aria-hidden="true">
-            <svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <clipPath id="clip">
-                        <polygon id="hexagon"
-                                 points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
-                    </clipPath>
-                </defs>
-                <image href="images/shape_art.png" clip-path="url(#clip)" width="128" height="128"/>
-                <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
-            </svg>
-        </div>
+    <div class="container mx-auto grid items-center md:flex py-4">
+        <svg class="block mx-auto md:mx-0" aria-hidden="true" width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <clipPath id="clip">
+                    <polygon id="hexagon"
+                             points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
+                </clipPath>
+            </defs>
+            <image href="images/shape_art.png" clip-path="url(#clip)" width="128" height="128"/>
+            <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
+        </svg>
         <div class="ml-8 prose prose-headings:text-primary-content text-primary-content">
-            <h1 class="mb-5 text-5xl font-bold">ShapeArt</h1>
+            <h1 class="mb-5 text-center md:text-left">ShapeArt</h1>
             <p>A passion project that aims to empower users to effortlessly create stunning 2D and 3D geometric art. ShapeArt is code in Unreal 5, with a balance of C++ and Blueprint.</p>
         </div>
     </div>
@@ -122,70 +146,32 @@
 
 <!-- Calibre Inhale -->
 <section class="bg-primary text-primary-content mb-3">
-    <div class="container mx-auto flex items-center py-4">
-        <div aria-hidden="true">
-            <svg width="128" height="128">
-                <defs>
-                    <clipPath id="clip">
-                        <polygon id="hexagon"
-                                 points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
-                    </clipPath>
-                </defs>
-                <g clip-path="url(#clip)">
-                    <rect height="100%" width="100%" fill="white"/>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" x="12" y="16"
-                         viewBox="0 -960 960 960">
-                        <path fill="royalblue"
-                              d="M270-80q-45 0-77.5-30.5T160-186v-558q0-38 23.5-68t61.5-38l395-78v640l-379 76q-9 2-15 9.5t-6 16.5q0 11 9 18.5t21 7.5h450v-640h80v720H270Zm90-233 200-39v-478l-200 39v478Zm-80 16v-478l-15 3q-11 2-18 9.5t-7 18.5v457q5-2 10.5-3.5T261-293l19-4Zm-40-472v482-482Z"/>
-                    </svg>
-                </g>
-                <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
-            </svg>
-        </div>
+    <div class="container mx-auto grid items-center md:flex py-4">
+        <svg class="block mx-auto md:mx-0" aria-hidden="true" width="128" height="128">
+            <defs>
+                <clipPath id="clip">
+                    <polygon id="hexagon"
+                             points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
+                </clipPath>
+            </defs>
+            <g clip-path="url(#clip)">
+                <rect height="100%" width="100%" fill="white"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" x="12" y="16"
+                     viewBox="0 -960 960 960">
+                    <path fill="royalblue"
+                          d="M270-80q-45 0-77.5-30.5T160-186v-558q0-38 23.5-68t61.5-38l395-78v640l-379 76q-9 2-15 9.5t-6 16.5q0 11 9 18.5t21 7.5h450v-640h80v720H270Zm90-233 200-39v-478l-200 39v478Zm-80 16v-478l-15 3q-11 2-18 9.5t-7 18.5v457q5-2 10.5-3.5T261-293l19-4Zm-40-472v482-482Z"/>
+                </svg>
+            </g>
+            <use href="#hexagon" class="stroke-accent" stroke-width="2" fill="transparent"/>
+        </svg>
         <div class="ml-8 prose prose-headings:text-primary-content text-primary-content">
-            <h1 class="mb-5 text-5xl font-bold">Calibre Inhale</h1>
+            <h1 class="mb-5 text-center md:text-left">Calibre Inhale</h1>
             <p>A client-side app for the Calibre E-book management software. Focused on providing a user-first interface for syncing books to Android based e-readers. In the early stages of development, it currently integrates with Google Drive's REST API. Support for more cloud storage services is in the works.</p>
 
             <p>Written using an Android Jetpack stack consisting of Compose, ROOM, Hilt, Lifecycle, Navigation, Espresso, JUnit, Retrofit2, Kotlin Coroutines</p>
         </div>
     </div>
 </section>
-
-
-<footer class="footer items-center p-4 bg-neutral text-neutral-content">
-    <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-center">
-        <!-- E-mail -->
-        <a href="mailto:bob@inhale.design">
-            <svg role="img" width="48" height="48" viewBox="0 -960 960 960">
-                <title>E-mail Icon</title>
-                <path class="fill-neutral-content" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/>
-            </svg>
-        </a>
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/inhale-design/">
-            <svg role="img" width="48" height="48" viewBox="0 0 16 16">
-                <title>LinkedIn Logo</title>
-                <path class="fill-neutral-content" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/>
-            </svg>
-        </a>
-        <!-- GitHub -->
-        <a href="https://github.com/inhaledesign">
-            <svg role="img" width="48" height="48" viewBox="0 0 24 24">
-                <title>GitHub Logo</title>
-                <path class="fill-neutral-content"
-                      d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"/>
-            </svg>
-        </a>
-        <!-- Stack Overflow-->
-        <a href="https://stackoverflow.com/users/1748584/bob-liberatore">
-        <svg role="img" width="48" height="48" viewBox="0 0 24 24">
-            <title>Stack Overflow Logo</title>
-            <rect width="24" height="24" fill="none"/>
-            <path class="fill-neutral-content" d="M17.36,20.2V14.82h1.79V22H3V14.82H4.8V20.2H17.36M6.77,14.32l.37-1.76,8.79,1.85-.37,1.76L6.77,14.32m1.16-4.21L8.69,8.5l8.14,3.78-.76,1.62L7.93,10.11m2.26-4,1.15-1.38,6.9,5.76-1.15,1.37-6.9-5.75m4.45-4.25L20,9.08l-1.44,1.07L13.2,2.94l1.44-1.07m-8,16.54v-1.8h9v1.8Z"/>
-        </svg>
-        </a>
-    </nav>
-</footer>
 
 </body>
 </html>
