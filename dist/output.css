@@ -1344,6 +1344,16 @@ html {
   margin-right: auto;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1496,6 +1506,11 @@ html {
   color: hsl(var(--a) / var(--tw-text-opacity));
 }
 
+.prose-strong\:drop-shadow-none :is(:where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  --tw-drop-shadow: drop-shadow(0 0 #0000);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 @media (min-width: 640px) {
   .sm\:mx-auto {
     margin-left: auto;
@@ -1519,6 +1534,11 @@ html {
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .md\:flex {
