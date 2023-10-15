@@ -1331,12 +1331,24 @@ html {
   grid-column: span 5 / span 5;
 }
 
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-start-3 {
+  grid-column-start: 3;
+}
+
 .row-start-2 {
   grid-row-start: 2;
 }
 
 .row-start-3 {
   grid-row-start: 3;
+}
+
+.row-start-1 {
+  grid-row-start: 1;
 }
 
 .m-2 {
@@ -1527,6 +1539,10 @@ html {
     grid-column: span 5 / span 5;
   }
 
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .md\:col-start-8 {
     grid-column-start: 8;
   }
@@ -1535,12 +1551,20 @@ html {
     grid-column-start: 3;
   }
 
+  .md\:col-start-1 {
+    grid-column-start: 1;
+  }
+
   .md\:row-span-2 {
     grid-row: span 2 / span 2;
   }
 
   .md\:row-start-2 {
     grid-row-start: 2;
+  }
+
+  .md\:row-start-1 {
+    grid-row-start: 1;
   }
 
   .md\:mx-0 {
@@ -1575,6 +1599,10 @@ html {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .md\:items-center {
