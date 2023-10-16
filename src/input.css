@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.fullscreen-mask {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.mask-cloud {
+    -webkit-mask-image: url('../src/images/cloud-mask.png');
+    mask-image: url('../src/images/cloud-mask.png');
+}
