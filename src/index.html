@@ -17,7 +17,7 @@
             <image href="images/cloud-mask.png" width="100%" height="100%"/>
         </mask>
     </defs>
-    <rect width="100%" height="100%" class="fill-primary stroke-accent" mask="url(#cloud-mask)"/>
+    <rect width="100%" height="100%" class="fill-primary" mask="url(#cloud-mask)"/>
 </svg>
 
 <header class="relative z-10 bg-transparent text-primary-content grid items-center rounded-b-sm shadow-lg">
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="mx-2 prose md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
+        <div class="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
             <p>I'm a passionate app developer dedicated to crafting products that deliver
                 <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
@@ -125,14 +125,13 @@
             </div>
         </div>
 
-        <div class="mx-2 prose md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
+        <div class="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
             <p>Teaming up with a professional mathematician, we embarked on a mission to transform math education by crafting a one-of-a-kind app that caters to learners of every age and diverse educational backgrounds. Tile Farm delivers a uniquely captivating learning experience, designed to align with constructivist teaching methodologies. Tile Farm's groundbreaking ideas were honored with an SBIR grant from the National Science Foundation.</p>
+            <p>Tile Farm was developed in native Android Kotlin/Java and a combination of PostgreSQL and SQLite3 for the backend. I pushed the Android API to its limits in order to deliver a multi-touch drag and drop experience not seen anywhere else.</p>
         </div>
 
-        <div class="block mx-auto md:row-start-1 md:row-span-2 md:col-start-2 md:self-center">
-            <img class="rounded-xl" src="images/tile_farm_screenshot.png"
-                 alt="Screen shot of Tile Farm on Android"
-                 width="445">
+        <div class="block mx-auto md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center">
+            <img class="rounded-xl" src="images/tile_farm_screenshot.png" alt="Screen shot of Tile Farm on Android" width="445">
         </div>
 
     </div>
@@ -165,9 +164,10 @@
             </div>
         </div>
 
-        <div class="mx-2 prose md:text-justify text-primary-content prose-strong:text-accent row-start-2">
-            <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates the compass into the Android notification bar as well as a three-dimensional compass written in OpenGL ES.</p>
-            <p>Developed using a test-driven approach, Modern Compass boasts extensive test coverage of over 90%.</p>
+        <div class="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+            <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates an animated compass into the Android notification bar, as well as a three-dimensional compass.</p>
+
+            <p>Modern Compass is native Android Kotlin/Java and OpenGL ES. I used modern Android Jetpack tools to make a modern MVVM Android App. I achieved 90% test coverage using Test Driven Development and Android testing tools like Espresso, UIAutomator, and JUnit. I used Kotlin coroutines and domain specific languages to achieve clean, asynchronous code for interfacing with the device's permissions, magnetometer, accelerometer, and location systems.</p>
         </div>
 
         <div class="block mx-2 md:mx-0 row-start-3 md:col-start-2 md:row-span-2 md:self-center">
@@ -202,8 +202,9 @@
                 </div>
             </div>
         </div>
-        <div class="mx-2 prose md:text-justify text-primary-content prose-strong:text-accent row-start-2">
-            <p>A passion project that aims to empower users to effortlessly create stunning 2D and 3D geometric art. ShapeArt is code in Unreal 5, with a balance of C++ and Blueprint.</p>
+        <div class="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+            <p>A passion project that aims to empower users to effortlessly create stunning 2D and 3D geometric art. ShapeArt is being written 3D first, which means inventing creating custom widgets in 3D space.</p>
+            <p>ShapeArt is being developed in UnrealEngine 5, with a balance of C++ and Blueprint. I paid special care to wrangle UE5's build system to run GoogleTest unit tests in a module completely separated from working code.</p>
         </div>
     </div>
 </section>
@@ -242,10 +243,10 @@
                 </div>
             </div>
         </div>
-        <div class="mx-2 prose md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+        <div class="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
             <p>A client-side app for the Calibre E-book management software. Focused on providing a user-first interface for syncing books to Android based e-readers. In the early stages of development, it currently integrates with Google Drive's REST API. Support for more cloud storage services is in the works.</p>
 
-            <p>Written using an Android Jetpack stack consisting of Compose, ROOM, Hilt, Lifecycle, Navigation, Espresso, JUnit, Retrofit2, Kotlin Coroutines</p>
+            <p>Written using an Android Jetpack stack consisting of Compose, ROOM, Hilt, Lifecycle, Navigation, Espresso, JUnit, Retrofit2, and Kotlin coroutines.</p>
         </div>
     </div>
 </section>
