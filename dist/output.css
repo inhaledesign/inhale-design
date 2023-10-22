@@ -1586,6 +1586,11 @@ html {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.cloud {
+  background-image: url("../src/images/cloud.svg");
+  background-size: 100% 100%;
+}
+
 .hover\:fill-accent:hover {
   fill: hsl(var(--a) / 1);
 }
