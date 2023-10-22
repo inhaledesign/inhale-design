@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.cloud {
-    background-image: url("../src/images/cloud.svg");
+.bg-cloud-mask {
+    background-image: url("../src/images/cloud-mask.png");
     background-size: 100% 100%;
 }
