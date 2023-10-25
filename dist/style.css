@@ -1178,15 +1178,6 @@ html {
   text-decoration-line: underline;
 }
 
-.mask {
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
-}
-
 :where(.menu li) .badge {
   justify-self: end;
 }
@@ -1363,16 +1354,8 @@ html {
   border-bottom-color: hsl(var(--bc) / 20%);
 }
 
-.fixed {
-  position: fixed;
-}
-
 .relative {
   position: relative;
-}
-
-.-z-10 {
-  z-index: -10;
 }
 
 .z-10 {
@@ -1454,14 +1437,6 @@ html {
   height: 1rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -1523,6 +1498,11 @@ html {
   border-bottom-left-radius: 0.125rem;
 }
 
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1530,10 +1510,6 @@ html {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.fill-primary {
-  fill: hsl(var(--p) / 1);
 }
 
 .fill-secondary {
@@ -1586,8 +1562,8 @@ html {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.cloud {
-  background-image: url("../src/images/cloud.svg");
+.bg-cloud-mask {
+  background-image: url("./images/cloud-mask.png");
   background-size: 100% 100%;
 }
 
