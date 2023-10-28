@@ -1564,7 +1564,7 @@ html {
 
 .bg-cloud-mask {
   background-image: url("./images/cloud-mask.png");
-  background-size: 100% 100%;
+  background-size: 100vw 100%;
 }
 
 .hover\:fill-accent:hover {
