@@ -5,7 +5,7 @@ module.exports = {
         extend: {}
     },
     plugins: [
-        require('@taiwindcss/typography'),
+        require('@tailwindcss/typography'),
         require("daisyui")
     ],
     daisyui: {
