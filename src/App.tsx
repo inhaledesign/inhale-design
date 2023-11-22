@@ -1,26 +1,84 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {EmailSVG, GithubSVG, HexagonImageSVG, LinkedInSVG, StackOverflowSVG} from './components/SVG'
+import {Divider} from './components/Divider'
+import {Section} from './components/Section'
+import about from './images/about.jpg'
+import tileFarm from './images/tile_farm.png'
+import {AndroidBadge, JavaBadge, KotlinBadge, PostgresqlBadge, SQLiteBadge} from './components/Badge'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App () {
+    return <div className='App bg-primary bg-cloud-mask'>
+        <Header/>
+        <Divider/>
+        <AboutMeSection/>
+        <Divider/>
+        <TileFarmSection/>
     </div>
-  );
 }
 
-export default App;
+function Header () {
+    return <header
+        className='relative z-10 bg-transparent text-primary-content grid items-center rounded-b-sm shadow-lg'>
+        <nav className='flex justify-end gap-2 m-2 drop-shadow-md'>
+            <a href='mailto:bob@inhale.design'><EmailSVG/></a>
+            <a href='https://www.linkedin.com/in/inhale-design/'><LinkedInSVG/></a>
+            <a href='https://github.com/inhaledesign'><GithubSVG/></a>
+            <a href='https://stackoverflow.com/users/1748584/bob-liberatore'><StackOverflowSVG/></a>
+        </nav>
+        <div className='container mx-2 md:mx-auto mt-4 drop-shadow-md'>
+            <span className='mb-5 text-7xl font-bold tracking-widest'>Inhale<br/></span>
+            <span className='mb-12 text-7xl font-bold tracking-widest ml-5'>&nbsp;Design</span>
+            <p className='font-bold mt-10 mb-8 tracking-widest'>Full-stack development for creative user experiences</p>
+        </div>
+    </header>
+}
+
+function AboutMeSection () {
+    return <Section>
+        <div className='flex flex-col self-baseline md:flex-row'>
+            <HexagonImageSVG imageSource={about}/>
+            <div className='prose prose-headings:text-primary-content self-center'>
+                <h1 className='text-center md:text-left mb-0'>Bob Liberatore</h1>
+            </div>
+        </div>
+
+        <div
+            className='mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2'>
+            <p>I'm a passionate app developer dedicated to crafting products that deliver
+                <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
+            </p>
+
+            <p>I firmly believe that in the realm of app development,
+                <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production quality.
+            </p>
+        </div>
+    </Section>
+}
+
+function TileFarmSection () {
+    return <Section>
+        <div className={'flex flex-col self-baseline md:flex-row'}>
+            <HexagonImageSVG imageSource={tileFarm}/>
+            <div className='prose prose-headings:text-primary-content self-center'>
+                <h1 className='text-center md:text-left mb-0'>Tile Farm</h1>
+                <div className='flex gap-2 justify-center md:justify-start'>
+                    <AndroidBadge/>
+                    <KotlinBadge/>
+                    <JavaBadge/>
+                    <PostgresqlBadge/>
+                    <SQLiteBadge/>
+                </div>
+            </div>
+        </div>
+
+        <div className='mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2'>
+            <p>Teaming up with a professional mathematician, we embarked on a mission to transform math education by crafting a one-of-a-kind app that caters to learners of every age and diverse educational backgrounds. Tile Farm delivers a uniquely captivating learning experience, designed to align with constructivist teaching methodologies. Tile Farm's groundbreaking ideas were honored with an SBIR grant from the National Science Foundation.</p>
+            <p>Tile Farm was developed in native Android Kotlin/Java and a combination of PostgreSQL and SQLite3 for the backend. I pushed the Android API to its limits in order to deliver a multi-touch drag and drop experience not seen anywhere else.</p>
+        </div>
+
+        <div className='block mx-auto md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center'>
+            <img className='rounded-xl' src='images/tile_farm_screenshot.png' alt='Screen shot of Tile Farm on Android' width={445}/>
+        </div>
+    </Section>
+}
