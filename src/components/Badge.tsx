@@ -5,8 +5,10 @@ import java from '../images/badges/java.svg'
 import postgresql from '../images/badges/postgresql.svg'
 import sqlite from '../images/badges/sqlite.svg'
 
+const badgeHeight = 24
+
 export function AndroidBadge () {
-   return <Badge imageSource={android} imageAlt={'Android badge'}/>
+    return <Badge imageSource={android} imageAlt={'Android badge'}/>
 }
 
 export function KotlinBadge () {
@@ -25,8 +27,6 @@ export function SQLiteBadge () {
     return <Badge imageSource={sqlite} imageAlt={'SQLite badge'}/>
 }
 
-
-
 function Badge ({imageSource, imageAlt}: ImageProps) {
-    return <img className={'inline my-0'} src={imageSource} alt={imageAlt} width={24} height={24}/>
+    return <img className={'inline my-0'} src={imageSource} alt={imageAlt} width={badgeHeight} height={badgeHeight}/>
 }
