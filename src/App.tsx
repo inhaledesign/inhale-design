@@ -72,7 +72,6 @@ function AboutMeSection () {
             <p>I'm a passionate app developer dedicated to crafting products that deliver
                 <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
-
             <p>I firmly believe that in the realm of app development,
                 <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production quality.
             </p>
@@ -124,7 +123,6 @@ function ModernCompassSection () {
 
         <SectionProse>
             <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates an animated compass into the Android notification bar, as well as a three-dimensional compass.</p>
-
             <p>Modern Compass is native Android Kotlin/Java and OpenGL ES. I used modern Android Jetpack tools to make a modern MVVM Android App. I achieved 90% test coverage using Test Driven Development and Android testing tools like Espresso, UIAutomator, and JUnit. I used Kotlin coroutines and domain specific languages to achieve clean, asynchronous code for interfacing with the device's permissions, magnetometer, accelerometer, and location systems.</p>
         </SectionProse>
 
@@ -171,7 +169,6 @@ function CalibreInhaleSection () {
 
         <SectionProse>
             <p>A client-side app for the Calibre E-book management software. Focused on providing a user-first interface for syncing books to Android based e-readers. In the early stages of development, it currently integrates with Google Drive's REST API. Support for more cloud storage services is in the works.</p>
-
             <p>Written using an Android Jetpack stack consisting of Compose, ROOM, Hilt, Lifecycle, Navigation, Espresso, JUnit, Retrofit2, and Kotlin coroutines.</p>
         </SectionProse>
     </Section>
