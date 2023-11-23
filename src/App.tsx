@@ -9,7 +9,7 @@ import {
     StackOverflowSVG
 } from './components/SVG'
 import {Divider} from './components/Divider'
-import {Section, SectionBadges, SectionHeader, SectionName, SectionTitle} from './components/Section'
+import {Section, SectionBadges, SectionHeader, SectionName, SectionProse, SectionTitle} from './components/Section'
 import about from './images/about.jpg'
 import tileFarm from './images/tile_farm.png'
 import modernCompass from './images/modern_compass.png'
@@ -68,8 +68,7 @@ function AboutMeSection () {
             </SectionTitle>
         </SectionHeader>
 
-        <div
-            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
+        <SectionProse>
             <p>I'm a passionate app developer dedicated to crafting products that deliver
                 <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
@@ -77,7 +76,7 @@ function AboutMeSection () {
             <p>I firmly believe that in the realm of app development,
                 <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production quality.
             </p>
-        </div>
+        </SectionProse>
     </Section>
 }
 
@@ -97,11 +96,10 @@ function TileFarmSection () {
             </SectionTitle>
         </SectionHeader>
 
-        <div
-            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
+        <SectionProse>
             <p>Teaming up with a professional mathematician, we embarked on a mission to transform math education by crafting a one-of-a-kind app that caters to learners of every age and diverse educational backgrounds. Tile Farm delivers a uniquely captivating learning experience, designed to align with constructivist teaching methodologies. Tile Farm's groundbreaking ideas were honored with an SBIR grant from the National Science Foundation.</p>
             <p>Tile Farm was developed in native Android Kotlin/Java and a combination of PostgreSQL and SQLite3 for the backend. I pushed the Android API to its limits in order to deliver a multi-touch drag and drop experience not seen anywhere else.</p>
-        </div>
+        </SectionProse>
 
         <div className="block mx-auto md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center">
             <img className="rounded-xl" src={tileFarmScreenshot} alt="Screen shot of Tile Farm on Android"
@@ -123,12 +121,12 @@ function ModernCompassSection () {
                 </SectionBadges>
             </SectionTitle>
         </SectionHeader>
-        <div
-            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+
+        <SectionProse>
             <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates an animated compass into the Android notification bar, as well as a three-dimensional compass.</p>
 
             <p>Modern Compass is native Android Kotlin/Java and OpenGL ES. I used modern Android Jetpack tools to make a modern MVVM Android App. I achieved 90% test coverage using Test Driven Development and Android testing tools like Espresso, UIAutomator, and JUnit. I used Kotlin coroutines and domain specific languages to achieve clean, asynchronous code for interfacing with the device's permissions, magnetometer, accelerometer, and location systems.</p>
-        </div>
+        </SectionProse>
 
         <div className="block mx-2 md:mx-0 row-start-3 md:col-start-2 md:row-span-2 md:self-center">
             <img className="mx-auto rounded-xl" src={modernCompassScreenshot}
@@ -170,12 +168,12 @@ function CalibreInhaleSection () {
                 </SectionBadges>
             </SectionTitle>
         </SectionHeader>
-        <div
-            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+
+        <SectionProse>
             <p>A client-side app for the Calibre E-book management software. Focused on providing a user-first interface for syncing books to Android based e-readers. In the early stages of development, it currently integrates with Google Drive's REST API. Support for more cloud storage services is in the works.</p>
 
             <p>Written using an Android Jetpack stack consisting of Compose, ROOM, Hilt, Lifecycle, Navigation, Espresso, JUnit, Retrofit2, and Kotlin coroutines.</p>
-        </div>
+        </SectionProse>
     </Section>
 }
 

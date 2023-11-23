@@ -24,3 +24,7 @@ export function SectionName ({children}: ChildProps) {
 export function SectionBadges ({children}: ChildProps) {
     return <div className="flex gap-2 justify-center md:justify-start">{children}</div>
 }
+
+export function SectionProse ({children}: ChildProps) {
+    return <div className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">{children}</div>
+}
