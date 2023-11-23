@@ -1,50 +1,75 @@
 import React from 'react';
 import './App.css';
-import {EmailSVG, GithubSVG, HexagonImageSVG, LinkedInSVG, StackOverflowSVG} from './components/SVG'
+import {
+    CalibreInhaleHexagonSVG,
+    EmailSVG,
+    GithubSVG,
+    HexagonImageSVG,
+    LinkedInSVG,
+    StackOverflowSVG
+} from './components/SVG'
 import {Divider} from './components/Divider'
 import {Section} from './components/Section'
 import about from './images/about.jpg'
 import tileFarm from './images/tile_farm.png'
-import {AndroidBadge, JavaBadge, KotlinBadge, PostgresqlBadge, SQLiteBadge} from './components/Badge'
+import modernCompass from './images/modern_compass.png'
+import shapeArt from './images/shape_art.png'
+import tileFarmScreenshot from './images/tile_farm_screenshot.png'
+import modernCompassScreenshot from './images/modern_compass_screenshot.webp'
+
+import {
+    AndroidBadge, CppBadge,
+    JavaBadge,
+    KotlinBadge,
+    OpenGLBadge,
+    PostgresqlBadge,
+    SQLiteBadge,
+    Unreal5Badge
+} from './components/Badge'
 
 export default function App () {
-    return <div className='App bg-primary bg-cloud-mask'>
+    return <div className="App bg-primary bg-cloud-mask">
         <Header/>
         <Divider/>
         <AboutMeSection/>
         <Divider/>
         <TileFarmSection/>
+        <Divider/>
+        <ModernCompassSection/>
+        <Divider/>
+        <ShapeArtSection/>
+        <Divider/>
+        <CalibreInhaleSection/>
+        <Divider/>
+        <Footer/>
     </div>
 }
 
 function Header () {
     return <header
-        className='relative z-10 bg-transparent text-primary-content grid items-center rounded-b-sm shadow-lg'>
-        <nav className='flex justify-end gap-2 m-2 drop-shadow-md'>
-            <a href='mailto:bob@inhale.design'><EmailSVG/></a>
-            <a href='https://www.linkedin.com/in/inhale-design/'><LinkedInSVG/></a>
-            <a href='https://github.com/inhaledesign'><GithubSVG/></a>
-            <a href='https://stackoverflow.com/users/1748584/bob-liberatore'><StackOverflowSVG/></a>
+        className="relative z-10 bg-transparent text-primary-content grid items-center rounded-b-sm shadow-lg">
+        <nav className="flex justify-end gap-2 m-2 drop-shadow-md">
+            <SocialLinks/>
         </nav>
-        <div className='container mx-2 md:mx-auto mt-4 drop-shadow-md'>
-            <span className='mb-5 text-7xl font-bold tracking-widest'>Inhale<br/></span>
-            <span className='mb-12 text-7xl font-bold tracking-widest ml-5'>&nbsp;Design</span>
-            <p className='font-bold mt-10 mb-8 tracking-widest'>Full-stack development for creative user experiences</p>
+        <div className="container mx-2 md:mx-auto mt-4 drop-shadow-md">
+            <span className="mb-5 text-7xl font-bold tracking-widest">Inhale<br/></span>
+            <span className="mb-12 text-7xl font-bold tracking-widest ml-5">&nbsp;Design</span>
+            <p className="font-bold mt-10 mb-8 tracking-widest">Full-stack development for creative user experiences</p>
         </div>
     </header>
 }
 
 function AboutMeSection () {
     return <Section>
-        <div className='flex flex-col self-baseline md:flex-row'>
+        <div className="flex flex-col self-baseline md:flex-row">
             <HexagonImageSVG imageSource={about}/>
-            <div className='prose prose-headings:text-primary-content self-center'>
-                <h1 className='text-center md:text-left mb-0'>Bob Liberatore</h1>
+            <div className="prose prose-headings:text-primary-content self-center">
+                <h1 className="text-center md:text-left mb-0">Bob Liberatore</h1>
             </div>
         </div>
 
         <div
-            className='mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2'>
+            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
             <p>I'm a passionate app developer dedicated to crafting products that deliver
                 <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
@@ -60,9 +85,9 @@ function TileFarmSection () {
     return <Section>
         <div className={'flex flex-col self-baseline md:flex-row'}>
             <HexagonImageSVG imageSource={tileFarm}/>
-            <div className='prose prose-headings:text-primary-content self-center'>
-                <h1 className='text-center md:text-left mb-0'>Tile Farm</h1>
-                <div className='flex gap-2 justify-center md:justify-start'>
+            <div className="prose prose-headings:text-primary-content self-center">
+                <h1 className="text-center md:text-left mb-0">Tile Farm</h1>
+                <div className="flex gap-2 justify-center md:justify-start">
                     <AndroidBadge/>
                     <KotlinBadge/>
                     <JavaBadge/>
@@ -72,13 +97,102 @@ function TileFarmSection () {
             </div>
         </div>
 
-        <div className='mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2'>
+        <div
+            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
             <p>Teaming up with a professional mathematician, we embarked on a mission to transform math education by crafting a one-of-a-kind app that caters to learners of every age and diverse educational backgrounds. Tile Farm delivers a uniquely captivating learning experience, designed to align with constructivist teaching methodologies. Tile Farm's groundbreaking ideas were honored with an SBIR grant from the National Science Foundation.</p>
             <p>Tile Farm was developed in native Android Kotlin/Java and a combination of PostgreSQL and SQLite3 for the backend. I pushed the Android API to its limits in order to deliver a multi-touch drag and drop experience not seen anywhere else.</p>
         </div>
 
-        <div className='block mx-auto md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center'>
-            <img className='rounded-xl' src='images/tile_farm_screenshot.png' alt='Screen shot of Tile Farm on Android' width={445}/>
+        <div className="block mx-auto md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center">
+            <img className="rounded-xl" src={tileFarmScreenshot} alt="Screen shot of Tile Farm on Android"
+                 width={445}/>
         </div>
     </Section>
+}
+
+function ModernCompassSection () {
+    return <Section>
+        <div className="flex flex-col md:flex-row self-baseline">
+            <HexagonImageSVG imageSource={modernCompass}/>
+            <div className="prose prose-headings:text-primary-content self-center">
+                <h1 className="text-center md:text-left mb-0">Modern Compass</h1>
+                <div className="flex gap-2 justify-center md:justify-start">
+                    <AndroidBadge/>
+                    <KotlinBadge/>
+                    <OpenGLBadge/>
+                </div>
+            </div>
+        </div>
+
+        <div
+            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+            <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates an animated compass into the Android notification bar, as well as a three-dimensional compass.</p>
+
+            <p>Modern Compass is native Android Kotlin/Java and OpenGL ES. I used modern Android Jetpack tools to make a modern MVVM Android App. I achieved 90% test coverage using Test Driven Development and Android testing tools like Espresso, UIAutomator, and JUnit. I used Kotlin coroutines and domain specific languages to achieve clean, asynchronous code for interfacing with the device's permissions, magnetometer, accelerometer, and location systems.</p>
+        </div>
+
+        <div className="block mx-2 md:mx-0 row-start-3 md:col-start-2 md:row-span-2 md:self-center">
+            <img className="mx-auto rounded-xl" src={modernCompassScreenshot}
+                 alt="Screenshot of Modern Compass in 3D mode" width={240}/>
+        </div>
+    </Section>
+}
+
+function ShapeArtSection () {
+    return <Section>
+        <div className="flex flex-col md:flex-row self-baseline">
+            <HexagonImageSVG imageSource={shapeArt}/>
+            <div className="prose prose-headings:text-primary-content self-center">
+                <h1 className="text-center md:text-left mb-0">ShapeArt</h1>
+                <div className="flex gap-2 justify-center md:justify-start">
+                    <Unreal5Badge/>
+                    <CppBadge/>
+                </div>
+            </div>
+        </div>
+        <div
+            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+            <p>A passion project that aims to empower users to effortlessly create stunning 2D and 3D geometric art. ShapeArt is being written 3D first, which means inventing creating custom widgets in 3D space.</p>
+            <p>ShapeArt is being developed in UnrealEngine 5, with a balance of C++ and Blueprint. I paid special care to wrangle UE5's build system to run GoogleTest unit tests in a module completely separated from working code.</p>
+        </div>
+    </Section>
+}
+
+function CalibreInhaleSection () {
+    return <Section>
+        <div className="flex flex-col md:flex-row self-baseline">
+            <CalibreInhaleHexagonSVG/>
+            <div className="prose prose-headings:text-primary-content self-center">
+                <h1 className="text-center md:text-left mb-0">Calibre Inhale</h1>
+                <div className="flex gap-2 justify-center md:justify-start">
+                    <AndroidBadge/>
+                    <KotlinBadge/>
+                    <SQLiteBadge/>
+                </div>
+            </div>
+        </div>
+        <div
+            className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
+            <p>A client-side app for the Calibre E-book management software. Focused on providing a user-first interface for syncing books to Android based e-readers. In the early stages of development, it currently integrates with Google Drive's REST API. Support for more cloud storage services is in the works.</p>
+
+            <p>Written using an Android Jetpack stack consisting of Compose, ROOM, Hilt, Lifecycle, Navigation, Espresso, JUnit, Retrofit2, and Kotlin coroutines.</p>
+        </div>
+    </Section>
+}
+
+function Footer () {
+    return <footer className="relative z-10 mx-auto bg-transparent rounded-md py-4">
+        <nav className="flex justify-center gap-2 drop-shadow-md">
+            <SocialLinks/>
+        </nav>
+    </footer>
+}
+
+function SocialLinks () {
+    return <>
+        <a href="mailto:bob@inhale.design"><EmailSVG/></a>
+        <a href="https://www.linkedin.com/in/inhale-design/"><LinkedInSVG/></a>
+        <a href="https://github.com/inhaledesign"><GithubSVG/></a>
+        <a href="https://stackoverflow.com/users/1748584/bob-liberatore"><StackOverflowSVG/></a>
+    </>
 }

@@ -34,6 +34,26 @@ export function StackOverflowSVG () {
     </svg>
 }
 
+export function CalibreInhaleHexagonSVG () {
+    return <svg className="block mx-auto md:mx-0 flex-shrink-0" aria-hidden="true" width="128" height="128">
+        <defs>
+            <clipPath id="clip">
+                <polygon id="hexagon"
+                         points="117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002"/>
+            </clipPath>
+        </defs>
+        <g clip-path="url(#clip)">
+            <rect height="100%" width="100%" fill="white"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" x="12" y="16"
+                 viewBox="0 -960 960 960">
+                <path fill="royalblue"
+                      d="M270-80q-45 0-77.5-30.5T160-186v-558q0-38 23.5-68t61.5-38l395-78v640l-379 76q-9 2-15 9.5t-6 16.5q0 11 9 18.5t21 7.5h450v-640h80v720H270Zm90-233 200-39v-478l-200 39v478Zm-80 16v-478l-15 3q-11 2-18 9.5t-7 18.5v457q5-2 10.5-3.5T261-293l19-4Zm-40-472v482-482Z"/>
+            </svg>
+        </g>
+        <use href="#hexagon" className="stroke-accent" stroke-width="2" fill="transparent"/>
+    </svg>
+}
+
 export function HexagonImageSVG({imageSource}: ImageProps) {
     return <svg className='block mx-auto md:mx-0 flex-shrink-0' aria-hidden='true' width='128' height='128'>
         <defs>
