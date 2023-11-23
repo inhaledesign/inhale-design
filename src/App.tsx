@@ -9,7 +9,7 @@ import {
     StackOverflowSVG
 } from './components/SVG'
 import {Divider} from './components/Divider'
-import {Section} from './components/Section'
+import {Section, SectionBadges, SectionHeader, SectionName, SectionTitle} from './components/Section'
 import about from './images/about.jpg'
 import tileFarm from './images/tile_farm.png'
 import modernCompass from './images/modern_compass.png'
@@ -61,12 +61,12 @@ function Header () {
 
 function AboutMeSection () {
     return <Section>
-        <div className="flex flex-col self-baseline md:flex-row">
+        <SectionHeader>
             <HexagonImageSVG imageSource={about}/>
-            <div className="prose prose-headings:text-primary-content self-center">
-                <h1 className="text-center md:text-left mb-0">Bob Liberatore</h1>
-            </div>
-        </div>
+            <SectionTitle>
+                <SectionName>Bob Liberatore</SectionName>
+            </SectionTitle>
+        </SectionHeader>
 
         <div
             className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
@@ -83,19 +83,19 @@ function AboutMeSection () {
 
 function TileFarmSection () {
     return <Section>
-        <div className={'flex flex-col self-baseline md:flex-row'}>
+        <SectionHeader>
             <HexagonImageSVG imageSource={tileFarm}/>
-            <div className="prose prose-headings:text-primary-content self-center">
-                <h1 className="text-center md:text-left mb-0">Tile Farm</h1>
-                <div className="flex gap-2 justify-center md:justify-start">
+            <SectionTitle>
+                <SectionName>Tile Farm</SectionName>
+                <SectionBadges>
                     <AndroidBadge/>
                     <KotlinBadge/>
                     <JavaBadge/>
                     <PostgresqlBadge/>
                     <SQLiteBadge/>
-                </div>
-            </div>
-        </div>
+                </SectionBadges>
+            </SectionTitle>
+        </SectionHeader>
 
         <div
             className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2">
@@ -112,18 +112,17 @@ function TileFarmSection () {
 
 function ModernCompassSection () {
     return <Section>
-        <div className="flex flex-col md:flex-row self-baseline">
+        <SectionHeader>
             <HexagonImageSVG imageSource={modernCompass}/>
-            <div className="prose prose-headings:text-primary-content self-center">
-                <h1 className="text-center md:text-left mb-0">Modern Compass</h1>
-                <div className="flex gap-2 justify-center md:justify-start">
+            <SectionTitle>
+                <SectionName>Modern Compass</SectionName>
+                <SectionBadges>
                     <AndroidBadge/>
                     <KotlinBadge/>
                     <OpenGLBadge/>
-                </div>
-            </div>
-        </div>
-
+                </SectionBadges>
+            </SectionTitle>
+        </SectionHeader>
         <div
             className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
             <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates an animated compass into the Android notification bar, as well as a three-dimensional compass.</p>
@@ -160,17 +159,17 @@ function ShapeArtSection () {
 
 function CalibreInhaleSection () {
     return <Section>
-        <div className="flex flex-col md:flex-row self-baseline">
+        <SectionHeader>
             <CalibreInhaleHexagonSVG/>
-            <div className="prose prose-headings:text-primary-content self-center">
-                <h1 className="text-center md:text-left mb-0">Calibre Inhale</h1>
-                <div className="flex gap-2 justify-center md:justify-start">
+            <SectionTitle>
+                <SectionName>Calibre Inhale</SectionName>
+                <SectionBadges>
                     <AndroidBadge/>
                     <KotlinBadge/>
                     <SQLiteBadge/>
-                </div>
-            </div>
-        </div>
+                </SectionBadges>
+            </SectionTitle>
+        </SectionHeader>
         <div
             className="mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent row-start-2">
             <p>A client-side app for the Calibre E-book management software. Focused on providing a user-first interface for syncing books to Android based e-readers. In the early stages of development, it currently integrates with Google Drive's REST API. Support for more cloud storage services is in the works.</p>
