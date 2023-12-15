@@ -32,7 +32,7 @@ import {DrawerContent, DrawerLayout, DrawerToggleLink, PageContent} from './comp
 const linkStyle = 'fill-secondary hover:fill-accent'
 
 export default function App () {
-    return <div className='App bg-primary bg-cloud-mask'>
+    return <div className='App bg-cloud-mask'>
         <DrawerLayout>
             <PageContent>
                 <Header/>
@@ -75,7 +75,7 @@ function Header () {
 
 function Menu () {
     const headerStyle = 'menu-title text-left text-xl drop-shadow-md'
-    return <ul className={'menu p-4 w-80 min-h-full bg-base-100 text-base-content'}>
+    return <ul className={'menu p-4 w-80 min-h-full bg-base-200 text-base-content'}>
         <li>
             <h2 className={headerStyle}>Android</h2>
             <ul>
