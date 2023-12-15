@@ -8,3 +8,7 @@ export type ImageProps = {
     imageSource: string
     imageAlt?: string
 }
+
+export type StyleProps = {
+    className?: string
+}

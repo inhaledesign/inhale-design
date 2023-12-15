@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import {
     EmailImage,
-    GithubImage,
+    GithubImage, HamburgerImage,
     HexagonImageMask,
     LinkedInImage,
     StackOverflowImage
-} from './components/SVG'
+} from './components/Images'
 import {Divider} from './components/Divider'
 import {Section, SectionBadges, SectionHeader, SectionName, SectionProse, SectionTitle} from './components/Section'
 import about from './images/about.jpg'
@@ -26,6 +26,9 @@ import {
     SQLiteBadge,
     Unreal5Badge
 } from './components/Badge'
+
+
+const linkStyle= 'fill-secondary hover:fill-accent'
 
 export default function App () {
     return <div className='App bg-primary bg-cloud-mask'>
@@ -50,6 +53,8 @@ function Header () {
         className={'relative z-10 bg-transparent text-primary-content grid items-center rounded-b-sm shadow-lg'}>
         <nav className={'flex justify-end gap-2 m-2 drop-shadow-md'}>
             <SocialLinks/>
+            <a href={''} className={linkStyle}>
+                <HamburgerImage/></a>
         </nav>
         <div className={'container mx-2 md:mx-auto mt-4 drop-shadow-md'}>
             <span className={'mb-5 text-7xl font-bold tracking-widest'}>Inhale<br/></span>
@@ -69,11 +74,9 @@ function AboutMeSection () {
         </SectionHeader>
 
         <SectionProse>
-            <p>I'm a passionate app developer dedicated to crafting products that deliver
-                <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
+            <p>I'm a passionate app developer dedicated to crafting products that deliver <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
-            <p>I firmly believe that in the realm of app development,
-                <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production quality.
+            <p>I firmly believe that in the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production quality.
             </p>
         </SectionProse>
     </Section>
@@ -101,8 +104,9 @@ function TileFarmSection () {
         </SectionProse>
 
         <div className={'block mx-auto md:my-0 md:row-start-1 md:row-span-2 md:col-start-2 md:self-center'}>
-            <img className={'rounded-xl'} src={tileFarmScreenshot} alt='Screen shot of Tile Farm on Android'
-                 width={445}/>
+            <img
+                className={'rounded-xl'} src={tileFarmScreenshot} alt='Screen shot of Tile Farm on Android'
+                width={445}/>
         </div>
     </Section>
 }
@@ -127,8 +131,9 @@ function ModernCompassSection () {
         </SectionProse>
 
         <div className={'block mx-2 md:mx-0 row-start-3 md:col-start-2 md:row-span-2 md:self-center'}>
-            <img className={'mx-auto rounded-xl'} src={modernCompassScreenshot}
-                 alt={'Screenshot of Modern Compass in 3D mode'} width={240}/>
+            <img
+                className={'mx-auto rounded-xl'} src={modernCompassScreenshot}
+                alt={'Screenshot of Modern Compass in 3D mode'} width={240}/>
         </div>
     </Section>
 }
@@ -184,9 +189,9 @@ function Footer () {
 
 function SocialLinks () {
     return <>
-        <a href='mailto:bob@inhale.design'><EmailImage/></a>
-        <a href='https://www.linkedin.com/in/inhale-design/'><LinkedInImage/></a>
-        <a href='https://github.com/inhaledesign'><GithubImage/></a>
-        <a href='https://stackoverflow.com/users/1748584/bob-liberatore'><StackOverflowImage/></a>
+        <a href={'mailto:bob@inhale.design'} className={linkStyle}><EmailImage/></a>
+        <a href={'https://www.linkedin.com/in/inhale-design/'} className={linkStyle}><LinkedInImage/></a>
+        <a href={'https://github.com/inhaledesign'} className={linkStyle}><GithubImage/></a>
+        <a href={'https://stackoverflow.com/users/1748584/bob-liberatore'} className={linkStyle}><StackOverflowImage/></a>
     </>
 }
