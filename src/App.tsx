@@ -26,35 +26,44 @@ import {
     SQLiteBadge,
     Unreal5Badge
 } from './components/Badge'
+import {DrawerContent, DrawerLayout, DrawerToggleLink, PageContent} from './components/Drawer'
 
 
-const linkStyle= 'fill-secondary hover:fill-accent'
+const linkStyle = 'fill-secondary hover:fill-accent'
 
 export default function App () {
     return <div className='App bg-primary bg-cloud-mask'>
-        <Header/>
-        <Divider/>
-        <AboutMeSection/>
-        <Divider/>
-        <TileFarmSection/>
-        <Divider/>
-        <ModernCompassSection/>
-        <Divider/>
-        <ShapeArtSection/>
-        <Divider/>
-        <CalibreInhaleSection/>
-        <Divider/>
-        <Footer/>
+        <DrawerLayout>
+            <PageContent>
+                <Header/>
+                <Divider/>
+                <AboutMeSection/>
+                <Divider/>
+                <TileFarmSection/>
+                <Divider/>
+                <ModernCompassSection/>
+                <Divider/>
+                <ShapeArtSection/>
+                <Divider/>
+                <CalibreInhaleSection/>
+                <Divider/>
+                <Footer/>
+            </PageContent>
+            <DrawerContent>
+                <Menu/>
+            </DrawerContent>
+        </DrawerLayout>
     </div>
 }
 
 function Header () {
     return <header
-        className={'relative z-10 bg-transparent text-primary-content grid items-center rounded-b-sm shadow-lg'}>
+        className={'relative z-10 bg-transparent text-primary-content grid items-center shadow-lg'}>
         <nav className={'flex justify-end gap-2 m-2 drop-shadow-md'}>
             <SocialLinks/>
-            <a href={''} className={linkStyle}>
-                <HamburgerImage/></a>
+            <DrawerToggleLink className={linkStyle}>
+                <HamburgerImage className={'lg:hidden'}/>
+            </DrawerToggleLink>
         </nav>
         <div className={'container mx-2 md:mx-auto mt-4 drop-shadow-md'}>
             <span className={'mb-5 text-7xl font-bold tracking-widest'}>Inhale<br/></span>
@@ -62,6 +71,32 @@ function Header () {
             <p className={'font-bold mt-10 mb-8 tracking-widest'}>Full-stack development for creative user experiences</p>
         </div>
     </header>
+}
+
+function Menu () {
+    const headerStyle = 'menu-title text-left text-xl drop-shadow-md'
+    return <ul className={'menu p-4 w-80 min-h-full bg-base-100 text-base-content'}>
+        <li>
+            <h2 className={headerStyle}>Android</h2>
+            <ul>
+                <li><a>Tile Farm</a></li>
+                <li><a>Modern Compass</a></li>
+                <li><a>Calibre Inhale</a></li>
+            </ul>
+        </li>
+        <li>
+            <h2 className={headerStyle}>Web</h2>
+            <ul>
+                <li><a>Valid Coffee</a></li>
+            </ul>
+        </li>
+        <li>
+            <h2 className={headerStyle}>Unreal</h2>
+            <ul>
+                <li><a>ShapeArt</a></li>
+            </ul>
+        </li>
+    </ul>
 }
 
 function AboutMeSection () {
@@ -76,7 +111,7 @@ function AboutMeSection () {
         <SectionProse>
             <p>I'm a passionate app developer dedicated to crafting products that deliver <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
-            <p>I firmly believe that in the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production quality.
+            <p>I firmly believe that in the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production ready.
             </p>
         </SectionProse>
     </Section>
@@ -189,9 +224,17 @@ function Footer () {
 
 function SocialLinks () {
     return <>
-        <a href={'mailto:bob@inhale.design'} className={linkStyle}><EmailImage/></a>
-        <a href={'https://www.linkedin.com/in/inhale-design/'} className={linkStyle}><LinkedInImage/></a>
-        <a href={'https://github.com/inhaledesign'} className={linkStyle}><GithubImage/></a>
-        <a href={'https://stackoverflow.com/users/1748584/bob-liberatore'} className={linkStyle}><StackOverflowImage/></a>
+        <a href={'mailto:bob@inhale.design'} className={linkStyle}>
+            <EmailImage/>
+        </a>
+        <a href={'https://www.linkedin.com/in/inhale-design/'} className={linkStyle}>
+            <LinkedInImage/>
+        </a>
+        <a href={'https://github.com/inhaledesign'} className={linkStyle}>
+            <GithubImage/>
+        </a>
+        <a href={'https://stackoverflow.com/users/1748584/bob-liberatore'} className={linkStyle}>
+            <StackOverflowImage/>
+        </a>
     </>
 }
