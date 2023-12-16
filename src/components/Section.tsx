@@ -1,7 +1,7 @@
 import {ChildProps} from '../types/Props'
 
 export function Section ({children}: ChildProps) {
-    return <section className='relative z-10 bg-transparent shadow-lg shadow-sky-800/20'>
+    return <section className='relative z-10 min-h-screen bg-transparent shadow-lg shadow-sky-800/20'>
         <div
             className={'container mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] md:grid-rows-[128px_auto] gap-4 p-4 drop-shadow-lg'}>
             {children}

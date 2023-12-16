@@ -18,7 +18,8 @@ import tileFarmScreenshot from './images/tile_farm_screenshot.png'
 import modernCompassScreenshot from './images/modern_compass_screenshot.webp'
 
 import {
-    AndroidBadge, CppBadge,
+    AndroidBadge,
+    CppBadge,
     JavaBadge,
     KotlinBadge,
     OpenGLBadge,
@@ -27,6 +28,7 @@ import {
     Unreal5Badge
 } from './components/Badge'
 import {DrawerContent, DrawerLayout, DrawerToggleLink, PageContent} from './components/Drawer'
+import {StyleProps} from './types/Props'
 
 
 const linkStyle = 'fill-secondary hover:fill-accent'
@@ -35,9 +37,13 @@ export default function App () {
     return <div className='App bg-cloud-mask'>
         <DrawerLayout>
             <PageContent>
+                <div className={'sticky lg:hidden top-0 z-20 flex justify-between p-2 drop-shadow-md bg-base-200/90'}>
+                    <DrawerToggleLink className={linkStyle}>
+                        <HamburgerImage/>
+                    </DrawerToggleLink>
+                    <SocialNav/>
+                </div>
                 <Header/>
-                <Divider/>
-                <AboutMeSection/>
                 <Divider/>
                 <TileFarmSection/>
                 <Divider/>
@@ -58,45 +64,43 @@ export default function App () {
 
 function Header () {
     return <header
-        className={'relative z-10 bg-transparent text-primary-content grid items-center shadow-lg shadow-sky-800/20'}>
-        <div className={'flex justify-between m-2 drop-shadow-md'}>
-            <DrawerToggleLink className={linkStyle}>
-                <HamburgerImage className={'lg:hidden'}/>
-            </DrawerToggleLink>
-            <SocialNav/>
-        </div>
+        className={'hero min-h-screen z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
         <div className={'container mx-2 md:mx-auto mt-4 drop-shadow-md'}>
             <span className={'mb-5 text-7xl font-bold tracking-widest'}>Inhale<br/></span>
             <span className={'mb-12 text-7xl font-bold tracking-widest ml-5'}>&nbsp;Design</span>
-            <p className={'font-bold mt-10 mb-8 tracking-widest'}>Full-stack development for creative user experiences</p>
+            <p className={'font-bold text-xl mt-10 mb-8 tracking-widest'}>Full-stack development for creative user experiences</p>
         </div>
     </header>
 }
 
 function Menu () {
     const headerStyle = 'menu-title text-left text-xl drop-shadow-md'
-    return <ul className={'menu p-4 w-80 min-h-full bg-base-200 text-base-content'}>
-        <li>
+    return <div className={'bg-base-200 min-h-full grid grid-cols-1 grid-rows-[1fr_2fr_1fr] justify-between py-4'}>
+        <div className={'self-start text-center'}>
+            <HexagonImageMask imageSource={about} className={'md:mx-auto'}/>
+            <h1>Bob Liberatore</h1>
+            <p className={'w-80 mx-auto'}>Passionate app developer crafting <strong>innovative user experiences</strong>.
+            </p>
+        </div>
+
+
+        <ul className={'menu p-4 mx-4 w-80 self-start ext-base-content justify-center bg-white/30 rounded-2xl'}>
             <h2 className={headerStyle}>Android</h2>
-            <ul>
-                <li><a>Tile Farm</a></li>
-                <li><a>Modern Compass</a></li>
-                <li><a>Calibre Inhale</a></li>
-            </ul>
-        </li>
-        <li>
+            <li><a>Tile Farm</a></li>
+            <li><a>Modern Compass</a></li>
+            <li><a>Calibre Inhale</a></li>
             <h2 className={headerStyle}>Web</h2>
-            <ul>
-                <li><a>Valid Coffee</a></li>
-            </ul>
-        </li>
-        <li>
+            <li><a>Valid Coffee</a></li>
+
             <h2 className={headerStyle}>Unreal</h2>
-            <ul>
-                <li><a>ShapeArt</a></li>
-            </ul>
-        </li>
-    </ul>
+            <li><a>ShapeArt</a></li>
+        </ul>
+
+        <div className={'self-end mx-auto'}>
+            <p className={'w-60'}>If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!</p>
+            <SocialNav className={'justify-self-center'}/>
+        </div>
+    </div>
 }
 
 function AboutMeSection () {
@@ -221,8 +225,8 @@ function Footer () {
     </footer>
 }
 
-function SocialNav () {
-    return <nav className={'flex justify-between gap-2'}>
+function SocialNav ({className}: StyleProps) {
+    return <nav className={`flex gap-2 justify-center ${className}`}>
         <a href={'mailto:bob@inhale.design'} className={linkStyle}>
             <EmailImage/>
         </a>

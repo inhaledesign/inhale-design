@@ -39,8 +39,8 @@ export function StackOverflowImage () {
     </svg>
 }
 
-export function HexagonImageMask ({imageSource}: ImageProps) {
-    return <svg className={'block mx-auto md:mx-0 flex-shrink-0'} aria-hidden={true} width={128} height={128}>
+export function HexagonImageMask ({imageSource, className}: ImageProps & StyleProps) {
+    return <svg className={`block mx-auto md:mx-0 flex-shrink-0 ${className}`} aria-hidden={true} width={128} height={128}>
         <defs>
             <clipPath id={'clip'}>
                 <polygon
