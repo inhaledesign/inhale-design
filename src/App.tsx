@@ -59,12 +59,12 @@ export default function App () {
 function Header () {
     return <header
         className={'relative z-10 bg-transparent text-primary-content grid items-center shadow-lg'}>
-        <nav className={'flex justify-end gap-2 m-2 drop-shadow-md'}>
-            <SocialLinks/>
+        <div className={'flex justify-between m-2 drop-shadow-md'}>
             <DrawerToggleLink className={linkStyle}>
                 <HamburgerImage className={'lg:hidden'}/>
             </DrawerToggleLink>
-        </nav>
+            <SocialNav/>
+        </div>
         <div className={'container mx-2 md:mx-auto mt-4 drop-shadow-md'}>
             <span className={'mb-5 text-7xl font-bold tracking-widest'}>Inhale<br/></span>
             <span className={'mb-12 text-7xl font-bold tracking-widest ml-5'}>&nbsp;Design</span>
@@ -217,13 +217,13 @@ function CalibreInhaleSection () {
 function Footer () {
     return <footer className={'relative z-10 mx-auto bg-transparent rounded-md py-4'}>
         <nav className={'flex justify-center gap-2 drop-shadow-md'}>
-            <SocialLinks/>
+            <SocialNav/>
         </nav>
     </footer>
 }
 
-function SocialLinks () {
-    return <>
+function SocialNav () {
+    return <nav className={'flex justify-between gap-2'}>
         <a href={'mailto:bob@inhale.design'} className={linkStyle}>
             <EmailImage/>
         </a>
@@ -236,5 +236,5 @@ function SocialLinks () {
         <a href={'https://stackoverflow.com/users/1748584/bob-liberatore'} className={linkStyle}>
             <StackOverflowImage/>
         </a>
-    </>
+    </nav>
 }
