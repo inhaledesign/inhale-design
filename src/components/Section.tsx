@@ -1,9 +1,9 @@
 import {ChildProps} from '../types/Props'
 
 export function Section ({children}: ChildProps) {
-    return <section className='relative z-10 bg-transparent rounded-sm shadow-lg'>
+    return <section className='relative z-10 bg-transparent shadow-lg shadow-sky-800/20'>
         <div
-            className={'container mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] md:grid-rows-[128px_auto] gap-4 py-4 drop-shadow-md'}>
+            className={'container mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] md:grid-rows-[128px_auto] gap-4 p-4 drop-shadow-lg'}>
             {children}
         </div>
     </section>
@@ -26,5 +26,5 @@ export function SectionBadges ({children}: ChildProps) {
 }
 
 export function SectionProse ({children}: ChildProps) {
-    return <div className={'mx-2 prose font-medium md:text-justify text-primary-content prose-strong:text-accent md:row-start-2'}>{children}</div>
+    return <div className={'mx-2 prose text-xl font-medium md:text-left text-primary-content prose-strong:text-accent md:row-start-2'}>{children}</div>
 }

@@ -58,7 +58,7 @@ export default function App () {
 
 function Header () {
     return <header
-        className={'relative z-10 bg-transparent text-primary-content grid items-center shadow-lg'}>
+        className={'relative z-10 bg-transparent text-primary-content grid items-center shadow-lg shadow-sky-800/20'}>
         <div className={'flex justify-between m-2 drop-shadow-md'}>
             <DrawerToggleLink className={linkStyle}>
                 <HamburgerImage className={'lg:hidden'}/>
@@ -107,7 +107,6 @@ function AboutMeSection () {
                 <SectionName>Bob Liberatore</SectionName>
             </SectionTitle>
         </SectionHeader>
-
         <SectionProse>
             <p>I'm a passionate app developer dedicated to crafting products that deliver <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
             </p>
