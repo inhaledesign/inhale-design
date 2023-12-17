@@ -8,7 +8,7 @@ export function DrawerLayout ({children}: ChildProps) {
 }
 
 export function PageContent ({children}: ChildProps) {
-    return <div className={'drawer-content'}>{children}</div>
+    return <div className={'drawer-content snap-y snap-mandatory h-screen overflow-scroll'}>{children}</div>
 }
 
 export function DrawerContent ({children}: ChildProps) {

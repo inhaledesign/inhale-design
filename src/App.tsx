@@ -35,14 +35,14 @@ const linkStyle = 'fill-secondary hover:fill-accent'
 
 export default function App () {
     return <div className='App bg-cloud-mask'>
+        <div className={'sticky lg:hidden top-0 z-20 flex justify-between p-2 drop-shadow-md bg-base-200/90'}>
+            <DrawerToggleLink className={linkStyle}>
+                <HamburgerImage/>
+            </DrawerToggleLink>
+            <SocialNav/>
+        </div>
         <DrawerLayout>
             <PageContent>
-                <div className={'sticky lg:hidden top-0 z-20 flex justify-between p-2 drop-shadow-md bg-base-200/90'}>
-                    <DrawerToggleLink className={linkStyle}>
-                        <HamburgerImage/>
-                    </DrawerToggleLink>
-                    <SocialNav/>
-                </div>
                 <Header/>
                 <Divider/>
                 <TileFarmSection/>
@@ -64,7 +64,7 @@ export default function App () {
 
 function Header () {
     return <header
-        className={'hero min-h-screen z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
+        className={'hero min-h-screen snap-start z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
         <div className={'container mx-2 md:mx-auto mt-4 drop-shadow-md'}>
             <span className={'mb-5 text-7xl font-bold tracking-widest'}>Inhale<br/></span>
             <span className={'mb-12 text-7xl font-bold tracking-widest ml-5'}>&nbsp;Design</span>
