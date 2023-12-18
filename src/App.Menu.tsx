@@ -59,7 +59,7 @@ function MenuSectionItem ({label, id, selectedSection}: { selectedSection: strin
         value={id}
         checked={selectedSection === id}
         onChange={scrollToSectionChangeHandler}
-        className='btn'/>
+        className='btn hover:bg-accent/50'/>
 }
 
 function MenuSectionHeader ({label}: LabelProps) {
