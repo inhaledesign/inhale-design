@@ -18,5 +18,5 @@ export function SectionBadges ({children}: ChildProps) {
 }
 
 export function SectionProse ({children}: ChildProps) {
-    return <div className={'prose mt-4 text-xl font-medium text-primary-content prose-strong:text-accent'}>{children}</div>
+    return <div className={'prose my-8 text-xl font-medium text-primary-content prose-strong:text-accent'}>{children}</div>
 }
