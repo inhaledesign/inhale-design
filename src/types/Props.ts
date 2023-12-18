@@ -12,3 +12,7 @@ export type ImageProps = {
 export type StyleProps = {
     className?: string
 }
+
+export type IdProps = {
+    id: string
+}

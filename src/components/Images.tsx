@@ -1,4 +1,5 @@
 import {ImageProps, StyleProps} from '../types/Props'
+import React from 'react'
 
 
 const linkImageSize = 32
@@ -39,21 +40,28 @@ export function StackOverflowImage () {
     </svg>
 }
 
-export function HexagonImageMask ({imageSource, className}: ImageProps & StyleProps) {
-    return <svg className={`block mx-auto md:mx-0 flex-shrink-0 ${className}`} aria-hidden={true} width={128} height={128}>
+// This needs to be added at the top of the page.
+// It's added separately so that it does not get affected by CSS of HexagonImage.
+export function HexagonClip() {
+    return <svg aria-hidden={true} width={0} height={0}>
         <defs>
-            <clipPath id={'clip'}>
+            <clipPath id={'clip-hexagon'}>
                 <polygon
                     id={'hexagon'}
                     points={'117.6935750346352,95 64,126 10.306424965364812,95.00000000000003 10.30642496536479,33.000000000000014 63.999999999999986,2 117.69357503463522,33.00000000000002'}/>
             </clipPath>
         </defs>
-        <image href={imageSource} clipPath={'url(#clip)'} width={128} height={128}/>
+    </svg>
+}
+
+export function HexagonImage ({imageSource, className}: ImageProps & StyleProps) {
+    return <svg className={`block flex-shrink-0 ${className}`} aria-hidden={true} width={128} height={128}>
+        <image href={imageSource} clipPath={'url(#clip-hexagon)'} width={128} height={128}/>
         <use href={'#hexagon'} className={'stroke-accent'} strokeWidth={2} fill={'transparent'}/>
     </svg>
 }
 
-export function HamburgerImage ({className} : StyleProps) {
+export function HamburgerImage ({className}: StyleProps) {
     return <svg xmlns={'http://www.w3.org/2000/svg'} width={'32'} height={'32'} viewBox={'0 0 512 512'} className={className}>
         <path d={'M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z'}/>
     </svg>

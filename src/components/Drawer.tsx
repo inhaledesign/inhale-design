@@ -8,12 +8,12 @@ export function DrawerLayout ({children}: ChildProps) {
 }
 
 export function PageContent ({children}: ChildProps) {
-    return <div className={'drawer-content snap-y snap-mandatory h-screen overflow-scroll'}>{children}</div>
+    return <div id={'page-content'} className={'drawer-content snap-y snap-mandatory h-screen overflow-scroll'}>{children}</div>
 }
 
 export function DrawerContent ({children}: ChildProps) {
     return <div className={'drawer-side z-20'}>
-        <label htmlFor={'my-drawer'} aria-label={'close sidebar'} className={'drawer-overlay'}></label>
+        <label htmlFor={'my-drawer'} aria-label={'close sidebar'} className={'drawer-overlay'}/>
         {children}
     </div>
 }
