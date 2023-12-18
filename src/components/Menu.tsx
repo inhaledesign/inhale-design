@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {IdProps, LabelProps} from '../types/Props'
 
 
 type SectionSetter = React.Dispatch<React.SetStateAction<string>>
@@ -14,67 +15,44 @@ const sectionIds = [
 ]
 const intersectionOptions = {
     root: document.getElementById('page-content'),
-    threshold: 0.9
+    threshold: 0.55
 }
 
 export function Menu () {
     const [selectedSection, setSelectedSection] = useState('header')
 
     const scrollEffect = newScrollSectionsEffect(setSelectedSection)
-    const handleRadioChange = scrollToSectionOnChangeHandler
 
     useEffect(scrollEffect, [])
 
     return <ul className={'menu p-4 gap-2 mx-4 w-80 self-start ext-base-content justify-center bg-white/30 rounded-2xl'}>
-        <h2 className={headerStyle}>Android</h2>
-        <input
-            type='radio'
-            aria-label={'Tile Farm'}
-            name='sections'
-            value={'section-tile-farm'}
-            checked={selectedSection === 'section-tile-farm'}
-            onChange={handleRadioChange}
-            className='btn'/>
-        <input
-            type='radio'
-            aria-label={'Modern Compass'}
-            name='sections'
-            value={'section-modern-compass'}
-            checked={selectedSection === 'section-modern-compass'}
-            onChange={handleRadioChange}
-            className='btn'/>
-        <input
-            type='radio'
-            aria-label={'Calibre Inhale'}
-            name='sections'
-            value={'section-calibre-inhale'}
-            checked={selectedSection === 'section-calibre-inhale'}
-            onChange={handleRadioChange}
-            className='btn'/>
+        <MenuSectionHeader label={'Android'}/>
+        <MenuSectionItem label={'Tile Farm'} selectedSection={selectedSection} id={'section-tile-farm'}/>
+        <MenuSectionItem label={'Modern Compass'} selectedSection={selectedSection} id={'section-modern-compass'}/>
+        <MenuSectionItem label={'Calibre Inhale'} selectedSection={selectedSection} id={'section-calibre-inhale'}/>
 
-        <h2 className={headerStyle}>Web</h2>
-        <input
-            type='radio'
-            aria-label={'Valid Coffee'}
-            name='sections'
-            value={'section-valid-coffee'}
-            checked={selectedSection === 'section-valid-coffee'}
-            onChange={handleRadioChange}
-            className='btn'/>
+        <MenuSectionHeader label={'Web'}/>
+        <MenuSectionItem label={'Valid Coffee'} selectedSection={selectedSection} id={'section-valid-coffee'}/>
 
-        <h2 className={headerStyle}>Unreal</h2>
-        <input
-            type='radio'
-            aria-label={'ShapeArt'}
-            name='sections'
-            value={'section-shape-art'}
-            checked={selectedSection === 'section-shape-art'}
-            onChange={handleRadioChange}
-            className='btn'/>
+        <MenuSectionHeader label={'Unreal'}/>
+        <MenuSectionItem label={'ShapeArt'} selectedSection={selectedSection} id={'section-shape-art'}/>
     </ul>
-
 }
 
+function MenuSectionItem ({label, id, selectedSection}: { selectedSection: string } & IdProps & LabelProps) {
+    return <input
+            type='radio'
+            aria-label={label}
+            name='sections'
+            value={id}
+            checked={selectedSection === id}
+            onChange={scrollToSectionChangeHandler}
+            className='btn'/>
+}
+
+function MenuSectionHeader({label} : LabelProps) {
+    return <h2 className={headerStyle}>{label}</h2>
+}
 
 function newScrollSectionsEffect (sectionSetter: SectionSetter) {
     return () => {
@@ -95,21 +73,22 @@ function newScrollSectionsEffect (sectionSetter: SectionSetter) {
     }
 }
 
-function scrollToSectionOnChangeHandler (event: React.ChangeEvent<HTMLInputElement>) {
+function scrollToSectionChangeHandler (event: React.ChangeEvent<HTMLInputElement>) {
     const targetId = event.target.value
     closeDrawer()
     scrollTo(targetId)
 }
 
-function closeDrawer() {
+function closeDrawer () {
     const myCheckbox = document.getElementById('my-drawer') as HTMLInputElement;
     myCheckbox.checked = false;
 
 }
 
-function scrollTo(targetId: string) {
+function scrollTo (targetId: string) {
     document.getElementById('page-content')?.scrollTo({
         top: document.getElementById(targetId)?.offsetTop,
-        behavior: 'smooth'
+        behavior: 'smooth',
+
     })
 }

@@ -30,7 +30,7 @@ import {StyleProps} from './types/Props'
 
 
 export default function App () {
-    return <div className='App bg-cloud-mask'>
+    return <div className='bg-cloud-mask'>
         <div className={'sticky lg:hidden top-0 z-20 flex justify-between p-2 drop-shadow-md bg-base-200/90'}>
             <DrawerLink/>
             <SocialLinks/>
@@ -77,7 +77,7 @@ function Header () {
     return <header
         id={'header'}
         className={'hero min-h-screen snap-start z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
-        <div className={'container mx-2 md:mx-auto mt-4 drop-shadow-md'}>
+        <div className={'container text-center mx-2 md:mx-auto mt-4 drop-shadow-md'}>
             <span className={'mb-5 text-7xl font-bold tracking-widest'}>Inhale<br/></span>
             <span className={'mb-12 text-7xl font-bold tracking-widest ml-5'}>&nbsp;Design</span>
             <p className={'font-bold text-xl mt-10 mb-8 tracking-widest'}>Full-stack development for creative user experiences</p>

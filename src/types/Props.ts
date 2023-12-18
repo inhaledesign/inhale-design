@@ -16,3 +16,7 @@ export type StyleProps = {
 export type IdProps = {
     id: string
 }
+
+export type LabelProps = {
+    label: string
+}
