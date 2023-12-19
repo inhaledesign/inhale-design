@@ -1,6 +1,6 @@
 import './App.css';
 import {
-    GalleryImage, GooglePlayImage,
+    GalleryImage, GithubImage, GooglePlayImage,
     HexagonImage, LinkImage
 } from './components/Images'
 import {Divider} from './components/Divider'
@@ -148,9 +148,14 @@ function ValidCoffeeSection () {
         <SectionProse>
             <p>A user-focused web app that provides a streamlined review interface for cafes in Albuquerque. I led a team of full stack web development students from conception to production to deliver this awesome capstone project.</p>
         </SectionProse>
-        <a href={'http://coffee.inhale.design'}>
-            <button className={'btn btn-secondary text-secondary-content fill-accent'}><LinkImage/> Website</button>
-        </a>
+        <div className={'flex gap-2'}>
+            <a href={'http://coffee.inhale.design'}>
+                <button className={'btn btn-secondary text-secondary-content fill-accent'}><LinkImage/> Website</button>
+            </a>
+            <a href={'https://github.com/cohort-web-43-coffee/coffee-capstone'}>
+                <button className={'btn btn-secondary text-secondary-content fill-accent'}><GithubImage/> Github</button>
+            </a>
+        </div>
     </Section>
 }
 

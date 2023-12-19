@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .bg-cloud {
-  background-image: url("./images/cloud-mask.png");
+  background-image: url('images/cloud.png');
   background-size: 100% 100%;
 }
