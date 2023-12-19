@@ -26,6 +26,7 @@ import {DrawerLink, SocialLinks} from './components/Links'
 import React from 'react'
 import {StyleProps} from './types/Props'
 import {Menu} from './App.Menu'
+import {showModal} from './components/Modal'
 
 
 export default function App () {
@@ -84,6 +85,7 @@ function AboutMeSection ({className}: StyleProps) {
 }
 
 function TileFarmSection () {
+    const showGallery = () => showModal('modal-tile-farm')
     return <Section id={'section-tile-farm'}>
         <HexagonImage imageSource={tileFarm}/>
         <SectionName>Tile Farm</SectionName>
@@ -99,11 +101,14 @@ function TileFarmSection () {
             <p>Teaming up with a professional mathematician, I crafted a unique app that aligns with constructivist teaching methodologies. Tile Farm delivers a uniquely creative learning experience with a custom mutli-touch drag-and-drop gesture interface. Tile Farm's groundbreaking ideas were honored with an SBIR grant from the National Science Foundation.</p>
         </SectionProse>
 
-        <button className='btn btn-secondary text-secondary-content fill-accent'><GalleryImage/> Screenshots</button>
+        <button className='btn btn-secondary text-secondary-content fill-accent' onClick={showGallery}>
+            <GalleryImage/> Screenshots
+        </button>
     </Section>
 }
 
 function ModernCompassSection () {
+    const showGallery = () => showModal('modal-modern-compass')
     return <Section id={'section-modern-compass'}>
         <HexagonImage imageSource={modernCompass}/>
         <SectionName>Modern Compass</SectionName>
@@ -117,7 +122,8 @@ function ModernCompassSection () {
             <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates an animated compass into the Android notification bar, as well as a three-dimensional compass.</p>
         </SectionProse>
         <div className={'flex gap-2'}>
-            <button className={'btn btn-secondary text-secondary-content fill-accent'}><GalleryImage/> Screenshots
+            <button className={'btn btn-secondary text-secondary-content fill-accent'} onClick={showGallery}>
+                <GalleryImage/> Screenshots
             </button>
             <a href={'https://play.google.com/store/apps/details?id=design.inhale.compass'}>
                 <button className={'btn btn-secondary text-secondary-content'}><GooglePlayImage/> Download</button>

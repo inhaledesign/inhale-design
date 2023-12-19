@@ -27,7 +27,7 @@ export function Menu () {
     useEffect(scrollEffect, [])
 
     return <div
-        className={'bg-base-200 min-h-full grid grid-cols-1 grid-rows-[1fr_2fr_1fr] justify-between py-4'}>
+        className={'bg-base-200 h-screen flex flex-col justify-around'}>
         <div className={'self-start text-center'}>
             <HexagonImage imageSource={about} className={'mx-auto'}/>
             <h1 className={'text-2xl font-semibold'}>Bob Liberatore</h1>
