@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c75385fb.css",
-    "main.js": "/static/js/main.393d465b.js",
+    "main.css": "/static/css/main.51c43869.css",
+    "main.js": "/static/js/main.81bd2a19.js",
     "static/media/cloud-mask.png": "/static/media/cloud-mask.46db638793db4ef682a2.png",
     "static/media/tile_farm.png": "/static/media/tile_farm.9fe2511b5836b7e2813f.png",
     "static/media/tile_farm_screenshot.png": "/static/media/tile_farm_screenshot.082619b274d07c5fa442.png",
@@ -25,11 +25,11 @@
     "index.html": "/index.html",
     "static/media/calibre_inhale.svg": "/static/media/calibre_inhale.0a0b482fb87c64bce89fa9d2fef9a05c.svg",
     "static/media/react.svg": "/static/media/react.01f39db2fd76e3857fd97fe066f6f9eb.svg",
-    "main.c75385fb.css.map": "/static/css/main.c75385fb.css.map",
-    "main.393d465b.js.map": "/static/js/main.393d465b.js.map"
+    "main.51c43869.css.map": "/static/css/main.51c43869.css.map",
+    "main.81bd2a19.js.map": "/static/js/main.81bd2a19.js.map"
   },
   "entrypoints": [
-    "static/css/main.c75385fb.css",
-    "static/js/main.393d465b.js"
+    "static/css/main.51c43869.css",
+    "static/js/main.81bd2a19.js"
   ]
 }
