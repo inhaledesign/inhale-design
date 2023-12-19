@@ -5,7 +5,6 @@ import {
 } from './components/Images'
 import {Divider} from './components/Divider'
 import {Section, SectionBadges, SectionName, SectionProse} from './components/Section'
-import about from './images/about.jpg'
 import tileFarm from './images/tile_farm.png'
 import modernCompass from './images/modern_compass.png'
 import shapeArt from './images/shape_art.png'
@@ -24,7 +23,6 @@ import {
 import {DrawerContent, DrawerLayout, PageContent} from './components/Drawer'
 import {DrawerLink, SocialLinks} from './components/Links'
 import React from 'react'
-import {StyleProps} from './types/Props'
 import {Menu} from './App.Menu'
 import {showModal} from './components/Modal'
 
@@ -38,8 +36,6 @@ export default function App () {
         <DrawerLayout>
             <PageContent>
                 <Header/>
-                <Divider className={'lg:hidden'}/>
-                <AboutMeSection className={'lg:hidden'}/>
                 <Divider/>
                 <TileFarmSection/>
                 <Divider/>
@@ -62,26 +58,13 @@ function Header () {
     return <header
         id={'header'}
         className={'hero min-h-screen snap-start z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
-        <div className={'container text-center mx-2 md:mx-auto mt-4 drop-shadow-md'}>
-            <span className={'mb-5 text-7xl font-bold tracking-widest'}>Inhale<br/></span>
-            <span className={'mb-12 text-7xl font-bold tracking-widest ml-5'}>&nbsp;Design</span>
-            <p className={'font-bold text-xl mt-10 mb-8 tracking-widest'}>Full-stack development for creative user experiences</p>
+        <div className={'container prose text-primary-content prose-headings:text-primary-content prose-strong:text-accent mx-2 drop-shadow-md'}>
+            <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design</h1>
+            <h2 className={'font-bold text-center mt-6 mb-20 tracking-widest'}>Full-stack development for creative user experiences</h2>
+            <p className={'text-lg mx-2 font-semibold'}>In the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing quality practices to develop production-ready apps efficiently while crafting <strong>innovative user experiences</strong>.
+            </p>
         </div>
     </header>
-}
-
-
-function AboutMeSection ({className}: StyleProps) {
-    return <Section id={'section-about-me'} className={className}>
-        <HexagonImage imageSource={about}/>
-        <SectionName>Bob Liberatore</SectionName>
-        <SectionProse>
-            <p>I'm a passionate app developer dedicated to crafting products that deliver <strong>innovative user experiences</strong>. If you're looking for someone to collaborate with on your app vision, let's connect and bring it to life!
-            </p>
-            <p>I firmly believe that in the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing cutting-edge development practices to deliver top-notch apps efficiently and hassle-free. With a strong focus on quality, I ensure that every app I develop is production ready.
-            </p>
-        </SectionProse>
-    </Section>
 }
 
 function TileFarmSection () {

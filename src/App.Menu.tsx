@@ -9,7 +9,6 @@ type SectionSetter = React.Dispatch<React.SetStateAction<string>>
 const headerStyle = 'menu-title text-left text-xl drop-shadow-md'
 const sectionIds = [
     'header',
-    'section-about-me',
     'section-tile-farm',
     'section-modern-compass',
     'section-calibre-inhale',
@@ -31,7 +30,7 @@ export function Menu () {
         <div className={'self-start text-center'}>
             <HexagonImage imageSource={about} className={'mx-auto'}/>
             <h1 className={'text-2xl font-semibold'}>Bob Liberatore</h1>
-            <p className={'w-80 mx-auto italic'}>Crafting innovative user experiences.</p>
+            <p className={'w-80 mx-auto italic'}>Developing innovative user experiences.</p>
         </div>
         <ul className={'menu p-4 gap-2 mx-4 w-80 self-start ext-base-content justify-center bg-white/30 rounded-2xl'}>
             <MenuSectionHeader label={'Android'}/>
