@@ -26,11 +26,11 @@ export function Menu () {
     useEffect(scrollEffect, [])
 
     return <div
-        className={'bg-base-200 h-screen flex flex-col justify-around'}>
-        <div className={'self-start text-center'}>
+        className={'bg-base-200 h-screen flex flex-col justify-center gap-4 md:justify-around'}>
+        <div className={'self-start text-center mx-auto'}>
             <HexagonImage imageSource={about} className={'mx-auto'}/>
             <h1 className={'text-2xl font-semibold'}>Bob Liberatore</h1>
-            <p className={'w-80 mx-auto italic'}>Developing innovative user experiences.</p>
+            <p className={'italic'}>Developing innovative user experiences.</p>
         </div>
         <ul className={'menu p-4 gap-2 mx-4 w-80 self-start ext-base-content justify-center bg-white/30 rounded-2xl'}>
             <MenuSectionHeader label={'Android'}/>
