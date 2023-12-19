@@ -6,7 +6,6 @@ import {SocialLinks} from './components/Links'
 
 
 type SectionSetter = React.Dispatch<React.SetStateAction<string>>
-const headerStyle = 'menu-title text-left text-xl drop-shadow-md'
 const sectionIds = [
     'header',
     'section-tile-farm',
@@ -26,23 +25,23 @@ export function Menu () {
     useEffect(scrollEffect, [])
 
     return <div
-        className={'bg-base-200 h-screen flex flex-col justify-center gap-4 md:justify-around'}>
+        className={'bg-base-200 h-screen flex flex-col justify-center gap-2 md:justify-around'}>
         <div className={'self-start text-center mx-auto'}>
             <HexagonImage imageSource={about} className={'mx-auto'}/>
             <h1 className={'text-2xl font-semibold'}>Bob Liberatore</h1>
             <p className={'italic'}>Developing innovative user experiences.</p>
         </div>
         <ul className={'menu p-4 gap-2 mx-4 w-80 self-start ext-base-content justify-center bg-white/30 rounded-2xl'}>
-            <MenuSectionHeader label={'Android'}/>
-            <MenuSectionItem label={'Tile Farm'} selectedSection={selectedSection} id={'section-tile-farm'}/>
-            <MenuSectionItem label={'Modern Compass'} selectedSection={selectedSection} id={'section-modern-compass'}/>
-            <MenuSectionItem label={'Calibre Inhale'} selectedSection={selectedSection} id={'section-calibre-inhale'}/>
+            <MenuHeader label={'Android'}/>
+            <MenuItem label={'Tile Farm'} selectedSection={selectedSection} id={'section-tile-farm'}/>
+            <MenuItem label={'Modern Compass'} selectedSection={selectedSection} id={'section-modern-compass'}/>
+            <MenuItem label={'Calibre Inhale'} selectedSection={selectedSection} id={'section-calibre-inhale'}/>
 
-            <MenuSectionHeader label={'Web'}/>
-            <MenuSectionItem label={'Valid Coffee'} selectedSection={selectedSection} id={'section-valid-coffee'}/>
+            <MenuHeader label={'Web'}/>
+            <MenuItem label={'Valid Coffee'} selectedSection={selectedSection} id={'section-valid-coffee'}/>
 
-            <MenuSectionHeader label={'Unreal'}/>
-            <MenuSectionItem label={'ShapeArt'} selectedSection={selectedSection} id={'section-shape-art'}/>
+            <MenuHeader label={'Unreal'}/>
+            <MenuItem label={'ShapeArt'} selectedSection={selectedSection} id={'section-shape-art'}/>
         </ul>
         <div className={'self-end mx-auto'}>
             <SocialLinks className={'justify-self-center'}/>
@@ -50,7 +49,7 @@ export function Menu () {
     </div>
 }
 
-function MenuSectionItem ({label, id, selectedSection}: { selectedSection: string } & IdProps & LabelProps) {
+function MenuItem ({label, id, selectedSection}: { selectedSection: string } & IdProps & LabelProps) {
     return <input
         type='radio'
         aria-label={label}
@@ -61,8 +60,8 @@ function MenuSectionItem ({label, id, selectedSection}: { selectedSection: strin
         className='btn hover:bg-accent/50'/>
 }
 
-function MenuSectionHeader ({label}: LabelProps) {
-    return <h2 className={headerStyle}>{label}</h2>
+function MenuHeader ({label}: LabelProps) {
+    return <h2 className={'menu-title text-left text-lg sm:text-xl p-0 sm:p-4 drop-shadow-md'}>{label}</h2>
 }
 
 function newScrollSectionsEffect (sectionSetter: SectionSetter) {
