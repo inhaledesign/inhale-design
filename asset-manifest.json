@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ac876f19.css",
-    "main.js": "/static/js/main.54f463df.js",
+    "main.css": "/static/css/main.1eee4f4f.css",
+    "main.js": "/static/js/main.990f7b26.js",
     "static/media/cloud.png": "/static/media/cloud.46db638793db4ef682a2.png",
     "static/media/tile_farm.png": "/static/media/tile_farm.9fe2511b5836b7e2813f.png",
     "static/media/modern_compass_screenshot_3.webp": "/static/media/modern_compass_screenshot_3.fa04bf7f2f3783b1cb54.webp",
@@ -27,11 +27,11 @@
     "index.html": "/index.html",
     "static/media/calibre_inhale.svg": "/static/media/calibre_inhale.0a0b482fb87c64bce89fa9d2fef9a05c.svg",
     "static/media/react.svg": "/static/media/react.01f39db2fd76e3857fd97fe066f6f9eb.svg",
-    "main.ac876f19.css.map": "/static/css/main.ac876f19.css.map",
-    "main.54f463df.js.map": "/static/js/main.54f463df.js.map"
+    "main.1eee4f4f.css.map": "/static/css/main.1eee4f4f.css.map",
+    "main.990f7b26.js.map": "/static/js/main.990f7b26.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac876f19.css",
-    "static/js/main.54f463df.js"
+    "static/css/main.1eee4f4f.css",
+    "static/js/main.990f7b26.js"
   ]
 }
