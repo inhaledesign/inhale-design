@@ -28,8 +28,7 @@ import {showModal} from './components/Modal'
 
 
 export default function App () {
-    return <div className='bg-cloud-mask'>
-        <DrawerLayout>
+    return <DrawerLayout>
             <DrawerPage>
                 <PageActionBar>
                     <DrawerLink/>
@@ -53,7 +52,6 @@ export default function App () {
                 <Menu/>
             </DrawerContent>
         </DrawerLayout>
-    </div>
 }
 
 function Header () {

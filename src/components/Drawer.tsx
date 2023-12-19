@@ -18,7 +18,7 @@ export function PageActionBar ({children}: ChildProps) {
 }
 
 export function PageContent({children}: ChildProps) {
-    return <div id={'page-content'} className={'snap-y snap-mandatory h-screen overflow-y-scroll'}>
+    return <div id={'page-content'} className={'bg-cloud snap-y snap-mandatory h-screen overflow-y-scroll'}>
         {children}
     </div>
 }
