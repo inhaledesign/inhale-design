@@ -138,6 +138,7 @@ function ValidCoffeeSection () {
             <Html5Badge/>
             <Css3Badge/>
             <TypescriptBadge/>
+            <PostgresqlBadge/>
             <ReactBadge/>
             <NextBadge/>
             <DockerBadge/>
