@@ -29,23 +29,26 @@ import {showModal} from './components/Modal'
 
 export default function App () {
     return <div className='bg-cloud-mask'>
-        <div className={'sticky lg:hidden top-0 z-20 flex justify-between p-2 drop-shadow-md bg-base-200/90'}>
-            <DrawerLink/>
-            <SocialLinks/>
-        </div>
+
         <DrawerLayout>
             <PageContent>
-                <Header/>
-                <Divider/>
-                <TileFarmSection/>
-                <Divider/>
-                <ModernCompassSection/>
-                <Divider/>
-                <CalibreInhaleSection/>
-                <Divider/>
-                <ValidCoffeeSection/>
-                <Divider/>
-                <ShapeArtSection/>
+                <div className={'lg:hidden top-0 z-20 flex sticky justify-between p-2 drop-shadow-md bg-base-200'}>
+                    <DrawerLink/>
+                    <SocialLinks/>
+                </div>
+                <div className={'snap-y snap-mandatory h-screen overflow-y-scroll'}>
+                    <Header/>
+                    <Divider/>
+                    <TileFarmSection/>
+                    <Divider/>
+                    <ModernCompassSection/>
+                    <Divider/>
+                    <CalibreInhaleSection/>
+                    <Divider/>
+                    <ValidCoffeeSection/>
+                    <Divider/>
+                    <ShapeArtSection/>
+                </div>
             </PageContent>
             <DrawerContent>
                 <Menu/>
