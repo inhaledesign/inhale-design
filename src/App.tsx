@@ -145,7 +145,7 @@ function ValidCoffeeSection () {
             <NodeBadge/>
         </SectionBadges>
         <SectionProse>
-            <p>Some text will go here.</p>
+            <p>A user-focused web app that provides a streamlined review interface for cafes in Albuquerque. I led a team of full stack web development students from conception to production to deliver this awesome capstone project.</p>
         </SectionProse>
         <a href={'http://coffee.inhale.design'}>
             <button className={'btn btn-secondary text-secondary-content fill-accent'}><LinkImage/> Website</button>
