@@ -20,7 +20,7 @@ import {
     SQLiteBadge, TypescriptBadge,
     Unreal5Badge
 } from './components/Badge'
-import {DrawerContent, DrawerLayout, PageContent} from './components/Drawer'
+import {DrawerContent, DrawerLayout, DrawerPage, PageActionBar, PageContent} from './components/Drawer'
 import {DrawerLink, SocialLinks} from './components/Links'
 import React from 'react'
 import {Menu} from './App.Menu'
@@ -29,14 +29,13 @@ import {showModal} from './components/Modal'
 
 export default function App () {
     return <div className='bg-cloud-mask'>
-
         <DrawerLayout>
-            <PageContent>
-                <div className={'lg:hidden top-0 z-20 flex sticky justify-between p-2 drop-shadow-md bg-base-200'}>
+            <DrawerPage>
+                <PageActionBar>
                     <DrawerLink/>
                     <SocialLinks/>
-                </div>
-                <div className={'snap-y snap-mandatory h-screen overflow-y-scroll'}>
+                </PageActionBar>
+                <PageContent>
                     <Header/>
                     <Divider/>
                     <TileFarmSection/>
@@ -48,8 +47,8 @@ export default function App () {
                     <ValidCoffeeSection/>
                     <Divider/>
                     <ShapeArtSection/>
-                </div>
-            </PageContent>
+                </PageContent>
+            </DrawerPage>
             <DrawerContent>
                 <Menu/>
             </DrawerContent>
