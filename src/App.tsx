@@ -20,7 +20,7 @@ import {
     SQLiteBadge, TypescriptBadge,
     Unreal5Badge
 } from './components/Badge'
-import {DrawerContent, DrawerLayout, DrawerPage, PageActionBar, PageContent} from './components/Drawer'
+import {DrawerContent, DrawerLayout, PageActionBar, PageContent} from './components/Drawer'
 import {DrawerLink, SocialLinks} from './components/Links'
 import React from 'react'
 import {Menu} from './App.Menu'
@@ -29,37 +29,37 @@ import {showModal} from './components/Modal'
 
 export default function App () {
     return <DrawerLayout>
-            <DrawerPage>
-                <PageActionBar>
-                    <DrawerLink/>
-                    <SocialLinks/>
-                </PageActionBar>
-                <PageContent>
-                    <Header/>
-                    <Divider/>
-                    <TileFarmSection/>
-                    <Divider/>
-                    <ModernCompassSection/>
-                    <Divider/>
-                    <CalibreInhaleSection/>
-                    <Divider/>
-                    <ValidCoffeeSection/>
-                    <Divider/>
-                    <ShapeArtSection/>
-                </PageContent>
-            </DrawerPage>
-            <DrawerContent>
-                <Menu/>
-            </DrawerContent>
-        </DrawerLayout>
+        <PageContent>
+            <PageActionBar>
+                <DrawerLink/>
+                <SocialLinks/>
+            </PageActionBar>
+            <Header/>
+            <Divider/>
+            <TileFarmSection/>
+            <Divider/>
+            <ModernCompassSection/>
+            <Divider/>
+            <CalibreInhaleSection/>
+            <Divider/>
+            <ValidCoffeeSection/>
+            <Divider/>
+            <ShapeArtSection/>
+        </PageContent>
+        <DrawerContent>
+            <Menu/>
+        </DrawerContent>
+    </DrawerLayout>
 }
 
 function Header () {
     return <header
         id={'header'}
-        className={'hero min-h-screen snap-start z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
-        <div className={'container prose text-primary-content prose-headings:text-primary-content prose-strong:text-accent mx-2 drop-shadow-md'}>
-            <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design</h1>
+        className={'hero h-full pt-[48px] snap-start z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
+        <div
+            className={'container prose text-primary-content prose-headings:text-primary-content prose-strong:text-accent mx-2 drop-shadow-md'}>
+            <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design
+            </h1>
             <h2 className={'font-bold text-center mt-6 mb-20 tracking-widest'}>Full-stack development for creative user experiences</h2>
             <p className={'text-lg mx-2 font-semibold'}>In the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing quality practices to develop production-ready apps efficiently while crafting <strong>innovative user experiences</strong>.
             </p>

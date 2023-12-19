@@ -7,18 +7,14 @@ export function DrawerLayout ({children}: ChildProps) {
     </div>
 }
 
-export function DrawerPage ({children}: ChildProps) {
-    return <div className={'drawer-content'}>{children}</div>
-}
-
-export function PageActionBar ({children}: ChildProps) {
-    return <div className={'lg:hidden top-0 z-20 flex sticky justify-between p-2 drop-shadow-md bg-base-200'}>
+export function PageContent({children}: ChildProps) {
+    return <div id={'page-content'} className={'drawer-content bg-cloud snap-y snap-mandatory h-screen overflow-y-scroll'}>
         {children}
     </div>
 }
 
-export function PageContent({children}: ChildProps) {
-    return <div id={'page-content'} className={'bg-cloud snap-y snap-mandatory h-screen overflow-y-scroll'}>
+export function PageActionBar ({children}: ChildProps) {
+    return <div className={'lg:hidden top-0 z-20 flex sticky justify-between p-2 drop-shadow-md bg-base-200'}>
         {children}
     </div>
 }
