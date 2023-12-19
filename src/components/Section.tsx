@@ -1,7 +1,7 @@
 import {ChildProps, IdProps, StyleProps} from '../types/Props'
 
 export function Section ({children, id, className}: ChildProps & IdProps & StyleProps) {
-    return <section id={id} className={`hero relative pt-[48px] snap-start z-10 h-full bg-transparent shadow-lg shadow-sky-800/20 ${className}`}>
+    return <section id={id} className={`hero relative pt-[48px] snap-start z-10 h-full bg-transparent ${className}`}>
         <div className={'hero-content flex flex-col items-center container mx-auto p-4 drop-shadow-lg'}>
             {children}
         </div>

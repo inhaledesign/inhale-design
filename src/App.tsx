@@ -3,7 +3,6 @@ import {
     GalleryImage, GithubImage, GooglePlayImage,
     HexagonImage, LinkImage
 } from './components/Images'
-import {Divider} from './components/Divider'
 import {Section, SectionBadges, SectionName, SectionProse} from './components/Section'
 import tileFarm from './images/tile_farm.png'
 import modernCompass from './images/modern_compass.png'
@@ -35,15 +34,10 @@ export default function App () {
                 <SocialLinks/>
             </PageActionBar>
             <Header/>
-            <Divider/>
             <TileFarmSection/>
-            <Divider/>
             <ModernCompassSection/>
-            <Divider/>
             <CalibreInhaleSection/>
-            <Divider/>
             <ValidCoffeeSection/>
-            <Divider/>
             <ShapeArtSection/>
         </PageContent>
         <DrawerContent>
@@ -55,7 +49,7 @@ export default function App () {
 function Header () {
     return <header
         id={'header'}
-        className={'hero h-full pt-[48px] snap-start z-10 bg-transparent text-primary-content shadow-lg shadow-sky-800/20'}>
+        className={'hero h-full pt-[48px] snap-start z-10 bg-transparent text-primary-content'}>
         <div
             className={'container prose text-primary-content prose-headings:text-primary-content prose-strong:text-accent mx-2 drop-shadow-md'}>
             <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design
