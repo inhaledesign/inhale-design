@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.51c43869.css",
-    "main.js": "/static/js/main.81bd2a19.js",
-    "static/media/cloud-mask.png": "/static/media/cloud-mask.46db638793db4ef682a2.png",
+    "main.css": "/static/css/main.ac876f19.css",
+    "main.js": "/static/js/main.54f463df.js",
+    "static/media/cloud.png": "/static/media/cloud.46db638793db4ef682a2.png",
     "static/media/tile_farm.png": "/static/media/tile_farm.9fe2511b5836b7e2813f.png",
+    "static/media/modern_compass_screenshot_3.webp": "/static/media/modern_compass_screenshot_3.fa04bf7f2f3783b1cb54.webp",
     "static/media/tile_farm_screenshot.png": "/static/media/tile_farm_screenshot.082619b274d07c5fa442.png",
-    "static/media/modern_compass_screenshot.webp": "/static/media/modern_compass_screenshot.8926c3ce16070ee81f1e.webp",
+    "static/media/modern_compass_screenshot_1.webp": "/static/media/modern_compass_screenshot_1.8926c3ce16070ee81f1e.webp",
+    "static/media/modern_compass_screenshot_2.webp": "/static/media/modern_compass_screenshot_2.39719f36131922e9e00f.webp",
     "static/media/shape_art.png": "/static/media/shape_art.27185feefb1659bb2c7a.png",
     "static/media/about.jpg": "/static/media/about.02812e940dcce865301b.jpg",
     "static/media/kotlin.svg": "/static/media/kotlin.5682acac6f4dbf4fcc1125f1acd2bd37.svg",
@@ -25,11 +27,11 @@
     "index.html": "/index.html",
     "static/media/calibre_inhale.svg": "/static/media/calibre_inhale.0a0b482fb87c64bce89fa9d2fef9a05c.svg",
     "static/media/react.svg": "/static/media/react.01f39db2fd76e3857fd97fe066f6f9eb.svg",
-    "main.51c43869.css.map": "/static/css/main.51c43869.css.map",
-    "main.81bd2a19.js.map": "/static/js/main.81bd2a19.js.map"
+    "main.ac876f19.css.map": "/static/css/main.ac876f19.css.map",
+    "main.54f463df.js.map": "/static/js/main.54f463df.js.map"
   },
   "entrypoints": [
-    "static/css/main.51c43869.css",
-    "static/js/main.81bd2a19.js"
+    "static/css/main.ac876f19.css",
+    "static/js/main.54f463df.js"
   ]
 }
