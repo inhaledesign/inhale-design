@@ -12,12 +12,12 @@ import calibreInhale from './images/calibre_inhale.svg'
 
 import {
     AndroidBadge,
-    CppBadge,
+    CppBadge, Css3Badge, DockerBadge, ExpressBadge, Html5Badge,
     JavaBadge,
-    KotlinBadge,
+    KotlinBadge, NextBadge, NodeBadge,
     OpenGLBadge,
-    PostgresqlBadge,
-    SQLiteBadge,
+    PostgresqlBadge, ReactBadge,
+    SQLiteBadge, TypescriptBadge,
     Unreal5Badge
 } from './components/Badge'
 import {DrawerContent, DrawerLayout, PageContent} from './components/Drawer'
@@ -134,6 +134,19 @@ function CalibreInhaleSection () {
 function ValidCoffeeSection () {
     return <Section id={'section-valid-coffee'}>
         <SectionName>Valid Coffee</SectionName>
+        <SectionBadges>
+            <Html5Badge/>
+            <Css3Badge/>
+            <TypescriptBadge/>
+            <ReactBadge/>
+            <NextBadge/>
+            <DockerBadge/>
+            <ExpressBadge/>
+            <NodeBadge/>
+        </SectionBadges>
+        <SectionProse>
+            <p>Some text will go here.</p>
+        </SectionProse>
         <a href={'http://coffee.inhale.design'}>
             <button className={'btn btn-secondary text-secondary-content fill-accent'}><LinkImage/> Website</button>
         </a>
