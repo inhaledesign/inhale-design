@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {IdProps, LabelProps} from './types/Props'
-import {HexagonImage} from './components/Images'
+import {CloseImage, HexagonImage} from './components/Images'
 import about from './images/about.jpg'
 import {SocialLinks} from './components/Links'
 
@@ -24,8 +24,8 @@ export function Menu () {
     const scrollEffect = newScrollSectionsEffect(setSelectedSection)
     useEffect(scrollEffect, [])
 
-    return <div
-        className={'bg-base-200 h-full flex flex-col justify-center gap-2 md:justify-around'}>
+    return <div className={'relative bg-base-200 h-full flex flex-col justify-center gap-2 md:justify-around'}>
+        <CloseImage className={'absolute top-0 right-0 fill-secondary hover:fill-accent'} onClick={closeDrawer}/>
         <div className={'self-start text-center mx-auto'}>
             <HexagonImage imageSource={about} className={'mx-auto'}/>
             <h1 className={'text-2xl font-semibold'}>Bob Liberatore</h1>

@@ -20,3 +20,7 @@ export type IdProps = {
 export type LabelProps = {
     label: string
 }
+
+export type ClickProps = {
+    onClick: () => void
+}
