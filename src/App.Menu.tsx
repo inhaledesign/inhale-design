@@ -25,7 +25,7 @@ export function Menu () {
     useEffect(scrollEffect, [])
 
     return <div className={'relative bg-base-200 h-full flex flex-col justify-center gap-2 md:justify-around'}>
-        <CloseImage className={'absolute top-0 right-0 fill-secondary hover:fill-accent'} onClick={closeDrawer}/>
+        <CloseImage className={'absolute top-0 right-0 fill-secondary hover:fill-accent sm:hidden'} onClick={closeDrawer}/>
         <div className={'self-start text-center mx-auto'}>
             <HexagonImage imageSource={about} className={'mx-auto'}/>
             <h1 className={'text-2xl font-semibold'}>Bob Liberatore</h1>
