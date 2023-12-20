@@ -51,7 +51,7 @@ export default function App () {
 function Header () {
     return <header
         id={'header'}
-        className={'hero h-screen pt-[48px] snap-start z-10 bg-transparent text-primary-content'}>
+        className={'hero h-[calc(100vh-48px)] snap-start z-10 bg-transparent text-primary-content'}>
         <div
             className={'container prose text-primary-content prose-headings:text-primary-content prose-strong:text-accent mx-2 drop-shadow-md'}>
             <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design</h1>
