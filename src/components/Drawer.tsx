@@ -6,21 +6,24 @@ export function DrawerLayout ({children}: ChildProps) {
         {children}
     </div>
 }
+export function DrawerPage({children}: ChildProps) {
+    return <div className={'drawer-content'}>{children}</div>
+}
 
 export function PageContent({children}: ChildProps) {
-    return <div id={'page-content'} className={'drawer-content bg-cloud snap-y snap-mandatory h-screen overflow-y-scroll'}>
+    return <div id={'page-content'} className={'bg-cloud snap-y snap-mandatory max-h-[calc(100dvh-48px)] lg:max-h-[100dvh] overflow-y-scroll'}>
         {children}
     </div>
 }
 
 export function PageActionBar ({children}: ChildProps) {
-    return <div className={'lg:hidden top-0 z-20 flex sticky justify-between p-2 drop-shadow-md bg-base-200'}>
+    return <div className={'lg:hidden z-20 flex w-screen justify-between p-2 drop-shadow-md bg-base-200'}>
         {children}
     </div>
 }
 
 export function DrawerContent ({children}: ChildProps) {
-    return <div className={'drawer-side z-20'}>
+    return <div className={'drawer-side h-[100dvh] z-20'}>
         <label htmlFor={'my-drawer'} aria-label={'close sidebar'} className={'drawer-overlay'}/>
         {children}
     </div>

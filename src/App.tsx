@@ -19,7 +19,7 @@ import {
     SQLiteBadge, TypescriptBadge,
     Unreal5Badge
 } from './components/Badge'
-import {DrawerContent, DrawerLayout, PageActionBar, PageContent} from './components/Drawer'
+import {DrawerContent, DrawerLayout, DrawerPage, PageActionBar, PageContent} from './components/Drawer'
 import {DrawerLink, SocialLinks} from './components/Links'
 import React from 'react'
 import {Menu} from './App.Menu'
@@ -28,18 +28,20 @@ import {showModal} from './components/Modal'
 
 export default function App () {
     return <DrawerLayout>
-        <PageContent>
+        <DrawerPage>
             <PageActionBar>
                 <DrawerLink/>
                 <SocialLinks/>
             </PageActionBar>
-            <Header/>
-            <TileFarmSection/>
-            <ModernCompassSection/>
-            <CalibreInhaleSection/>
-            <ValidCoffeeSection/>
-            <ShapeArtSection/>
-        </PageContent>
+            <PageContent>
+                <Header/>
+                <TileFarmSection/>
+                <ModernCompassSection/>
+                <CalibreInhaleSection/>
+                <ValidCoffeeSection/>
+                <ShapeArtSection/>
+            </PageContent>
+        </DrawerPage>
         <DrawerContent>
             <Menu/>
         </DrawerContent>
@@ -52,8 +54,7 @@ function Header () {
         className={'hero h-screen pt-[48px] snap-start z-10 bg-transparent text-primary-content'}>
         <div
             className={'container prose text-primary-content prose-headings:text-primary-content prose-strong:text-accent mx-2 drop-shadow-md'}>
-            <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design
-            </h1>
+            <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design</h1>
             <h2 className={'font-bold text-center mt-6 mb-20 tracking-widest'}>Full-stack development for creative user experiences</h2>
             <p className={'text-md md:text-lg mx-2 font-semibold'}>In the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing quality practices to develop production-ready apps efficiently while crafting <strong>innovative user experiences</strong>.
             </p>
@@ -147,7 +148,8 @@ function ValidCoffeeSection () {
                 <button className={'btn btn-secondary text-secondary-content fill-accent'}><LinkImage/> Website</button>
             </a>
             <a href={'https://github.com/cohort-web-43-coffee/coffee-capstone'}>
-                <button className={'btn btn-secondary text-secondary-content fill-accent'}><GithubImage/> Github</button>
+                <button className={'btn btn-secondary text-secondary-content fill-accent'}><GithubImage/> Github
+                </button>
             </a>
         </div>
     </Section>
