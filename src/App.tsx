@@ -80,7 +80,7 @@ function TileFarmSection () {
         </SectionProse>
 
         <button className='btn btn-secondary text-secondary-content fill-accent' onClick={showGallery}>
-            <GalleryImage/> Screenshots
+            <GalleryImage/>Gallery
         </button>
     </Section>
 }
@@ -100,11 +100,9 @@ function ModernCompassSection () {
             <p>An innovative take one the traditional magnetic compass. Modern Compass offers a variety of novel features, including a service that integrates an animated compass into the Android notification bar, as well as a three-dimensional compass.</p>
         </SectionProse>
         <div className={'flex gap-2'}>
-            <button className={'btn btn-secondary text-secondary-content fill-accent'} onClick={showGallery}>
-                <GalleryImage/> Screenshots
-            </button>
+            <button className={'btn btn-secondary text-secondary-content fill-accent'} onClick={showGallery}><GalleryImage/>Gallery</button>
             <a href={'https://play.google.com/store/apps/details?id=design.inhale.compass'}>
-                <button className={'btn btn-secondary text-secondary-content'}><GooglePlayImage/> Download</button>
+                <button className={'btn btn-secondary text-secondary-content'}><GooglePlayImage/>Download</button>
             </a>
         </div>
     </Section>
@@ -145,11 +143,10 @@ function ValidCoffeeSection () {
         </SectionProse>
         <div className={'flex gap-2'}>
             <a href={'http://coffee.inhale.design'}>
-                <button className={'btn btn-secondary text-secondary-content fill-accent'}><LinkImage/> Website</button>
+                <button className={'btn btn-secondary text-secondary-content fill-accent'}><LinkImage/>Website</button>
             </a>
             <a href={'https://github.com/cohort-web-43-coffee/coffee-capstone'}>
-                <button className={'btn btn-secondary text-secondary-content fill-accent'}><GithubImage/> Github
-                </button>
+                <button className={'btn btn-secondary text-secondary-content fill-accent'}><GithubImage/>Github</button>
             </a>
         </div>
     </Section>
