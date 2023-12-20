@@ -11,7 +11,7 @@ export function DrawerPage({children}: ChildProps) {
 }
 
 export function PageContent({children}: ChildProps) {
-    return <div id={'page-content'} className={'bg-cloud snap-y snap-mandatory max-h-[calc(100dvh-48px)] lg:max-h-[100dvh] overflow-y-scroll'}>
+    return <div id={'page-content'} className={'bg-cloud snap-y snap-mandatory h-[calc(100dvh-48px)] lg:h-[100dvh] overflow-y-scroll'}>
         {children}
     </div>
 }
