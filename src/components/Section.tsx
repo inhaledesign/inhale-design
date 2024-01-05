@@ -1,8 +1,7 @@
 import {ChildProps, IdProps, StyleProps} from '../types/Props'
 
 export function Section ({children, id, className}: ChildProps & IdProps & StyleProps) {
-    // Must have 48 padding at top to account for actionbar
-    return <section id={id} className={`hero relative snap-start z-10 h-[calc(100vh-48px)] bg-transparent ${className}`}>
+    return <section id={id} className={`hero relative snap-start z-10 h-[calc(100vh-48px)] md:h-screen bg-transparent ${className}`}>
         <div className={'hero-content flex flex-col gap-0 items-center drop-shadow-lg'}>
             {children}
         </div>
