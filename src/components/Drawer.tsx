@@ -16,7 +16,7 @@ export function PageContent ({children}: ChildProps) {
         const parallaxMultiplier = 0.05
         const background = document.getElementById('page-content') as HTMLElement
         const scrollPosition = background.scrollTop
-        background.style.backgroundPositionY = `-${scrollPosition * parallaxMultiplier}px`
+        background.style.backgroundPositionY = `calc(-50dvh + ${scrollPosition * parallaxMultiplier}px)`
     }
 
     return <div
