@@ -6,12 +6,22 @@ export function DrawerLayout ({children}: ChildProps) {
         {children}
     </div>
 }
-export function DrawerPage({children}: ChildProps) {
+
+export function DrawerPage ({children}: ChildProps) {
     return <div className={'drawer-content'}>{children}</div>
 }
 
-export function PageContent({children}: ChildProps) {
-    return <div id={'page-content'} className={'bg-cloud snap-y snap-mandatory h-[calc(100dvh-48px)] lg:h-[100dvh] overflow-y-scroll'}>
+export function PageContent ({children}: ChildProps) {
+    const parallaxScroll = () => {
+        const parallaxMultiplier = 0.05
+        const background = document.getElementById('page-content') as HTMLElement
+        const scrollPosition = background.scrollTop
+        background.style.backgroundPositionY = `-${scrollPosition * parallaxMultiplier}px`
+    }
+
+    return <div
+        id={'page-content'} className={'bg-cloud snap-y snap-mandatory h-[calc(100dvh-48px)] lg:h-[100dvh] overflow-y-scroll'}
+        onScroll={parallaxScroll}>
         {children}
     </div>
 }

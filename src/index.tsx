@@ -15,6 +15,7 @@ import {Carousel, CarouselSlide} from './components/Carousel'
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
 root.render(
     <React.StrictMode>
         <Modal id={'modal-modern-compass'}>
