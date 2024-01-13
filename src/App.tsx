@@ -8,7 +8,6 @@ import tileFarm from './images/tile_farm.png'
 import modernCompass from './images/modern_compass.png'
 import shapeArt from './images/shape_art.png'
 import calibreInhale from './images/calibre_inhale.svg'
-
 import {
     AndroidBadge,
     CppBadge, Css3Badge, DockerBadge, ExpressBadge, Html5Badge,
@@ -24,6 +23,7 @@ import {DrawerLink, SocialLinks} from './components/Links'
 import React from 'react'
 import {Menu} from './App.Menu'
 import {showModal} from './components/Modal'
+import {animateFadeIn} from './constants'
 
 
 export default function App () {
@@ -54,9 +54,9 @@ function Header () {
         className={'hero h-full snap-start z-10 bg-transparent text-primary-content'}>
         <div
             className={'container prose text-primary-content prose-headings:text-primary-content prose-strong:text-accent mx-2 drop-shadow-md'}>
-            <h1 className={'text-7xl text-center mb-0 font-bold tracking-widest'}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design</h1>
-            <h2 className={'font-bold text-center mt-6 mb-20 tracking-widest'}>Full-stack development for creative user experiences</h2>
-            <p className={'text-md md:text-lg mx-2 font-semibold'}>In the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing quality practices to develop production-ready apps efficiently while crafting <strong>innovative user experiences</strong>.
+            <h1 className={`text-7xl text-center mb-0 font-bold tracking-widest ${animateFadeIn}`}>Inhale<br/>&nbsp;&nbsp;&nbsp;Design</h1>
+            <h2 className={`font-bold text-center mt-6 mb-20 tracking-widest ${animateFadeIn} animate-delay-500`}>Full-stack development for creative user experiences</h2>
+            <p className={`text-md md:text-lg mx-2 font-semibold ${animateFadeIn} animate-delay-[900ms]`}>In the realm of app development, <strong>execution is everything</strong>. I thrive on an Agile mentality, harnessing quality practices to develop production-ready apps efficiently while crafting <strong>innovative user experiences</strong>.
             </p>
         </div>
     </header>

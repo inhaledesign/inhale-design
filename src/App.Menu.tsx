@@ -3,6 +3,7 @@ import {IdProps, LabelProps} from './types/Props'
 import {CloseImage, HexagonImage} from './components/Images'
 import about from './images/about.jpg'
 import {SocialLinks} from './components/Links'
+import {animateFadeIn} from './constants'
 
 
 type SectionSetter = React.Dispatch<React.SetStateAction<string>>
@@ -22,7 +23,7 @@ const intersectionOptions = {
 export function Menu () {
     const [selectedSection, setSelectedSection] = useState('header')
     const scrollEffect = newScrollSectionsEffect(setSelectedSection)
-    useEffect(scrollEffect, [])
+    useEffect(scrollEffect)
 
     return <div className={'relative bg-base-200 h-full flex flex-col justify-center gap-2 md:justify-around'}>
         <CloseImage className={'absolute top-0 right-0 fill-secondary hover:fill-accent sm:hidden'} onClick={closeDrawer}/>
@@ -66,20 +67,25 @@ function MenuHeader ({label}: LabelProps) {
 
 function newScrollSectionsEffect (sectionSetter: SectionSetter) {
     return () => {
-        const intersectionCallback = (entries: IntersectionObserverEntry[]) => {
-            for (const entry of entries) {
-                if (entry.isIntersecting) {
-                    sectionSetter(entry.target.id)
-                }
-            }
-        }
-
+        const intersectionCallback = newIntersectionCallback(sectionSetter)
         const intersectionObserver = new IntersectionObserver(intersectionCallback, intersectionOptions)
 
         sectionIds.forEach(sectionId => {
             const section = document.getElementById(sectionId) as Element
             intersectionObserver.observe(section)
         })
+    }
+}
+
+function newIntersectionCallback(sectionSetter: SectionSetter) {
+    return (entries: IntersectionObserverEntry[]) => {
+        const animateFadeInTokens = animateFadeIn.split(' ')
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                sectionSetter(entry.target.id)
+                entry.target.classList.add(...animateFadeInTokens)
+            }
+        }
     }
 }
 

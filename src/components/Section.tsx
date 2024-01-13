@@ -1,7 +1,8 @@
 import {ChildProps, IdProps, StyleProps} from '../types/Props'
 
 export function Section ({children, id, className}: ChildProps & IdProps & StyleProps) {
-    return <section id={id} className={`hero relative snap-start z-10 h-full bg-transparent ${className}`}>
+    // Sections start with opacity-0 for fade-in animations
+    return <section id={id} className={`hero relative snap-start z-10 h-full bg-transparent opacity-0 ${className}`}>
         <div className={'hero-content flex flex-col gap-0 items-center drop-shadow-lg'}>
             {children}
         </div>
