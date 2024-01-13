@@ -1,1 +1,1 @@
-export const animateFadeIn = 'animate-fade animate-ease-in'
+export const animateFadeIn = 'animate-fade animate-ease-out'
