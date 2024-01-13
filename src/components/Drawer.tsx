@@ -14,7 +14,7 @@ export function DrawerPage ({children}: ChildProps) {
 export function PageContent ({children}: ChildProps) {
     return <div
         id={'page-content'} className={'bg-cloud snap-y snap-mandatory h-[calc(100dvh-48px)] lg:h-[100dvh] overflow-y-scroll'}
-        onScroll={parallaxScroll}>
+        onScroll={parallaxScroll} onLoad={parallaxScroll}>
         {children}
     </div>
 }
