@@ -26,6 +26,6 @@ export function SocialLinks ({className}: StyleProps) {
 
 export function DrawerLink () {
     return <DrawerToggleLink className={linkStyle}>
-        <HamburgerImage/>
+        <HamburgerImage className={'cursor-pointer'}/>
     </DrawerToggleLink>
 }
