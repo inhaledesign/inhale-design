@@ -23,11 +23,12 @@ const intersectionOptions = {
 export function Menu () {
     const [selectedSection, setSelectedSection] = useState('header')
     const scrollEffect = newScrollSectionsEffect(setSelectedSection)
+    const scrollToHeader = () => scrollTo('header')
     useEffect(scrollEffect)
 
     return <div className={'relative bg-base-200 h-full flex flex-col justify-center gap-2 md:justify-around'}>
         <CloseImage className={'absolute top-0 right-0 fill-secondary hover:fill-accent sm:hidden'} onClick={closeDrawer}/>
-        <div className={'self-start text-center mx-auto'}>
+        <div className={'self-start text-center mx-auto cursor-pointer'} onClick={scrollToHeader}>
             <HexagonImage imageSource={about} className={'mx-auto'}/>
             <h1 className={'text-2xl font-semibold'}>Bob Liberatore</h1>
             <p className={'italic'}>Developing innovative user experiences.</p>
